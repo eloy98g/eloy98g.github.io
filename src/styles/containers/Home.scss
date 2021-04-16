@@ -1,4 +1,4 @@
-@import "./Vars.scss";
+@import "../Vars.scss";
 
 *{
     box-sizing: border-box;
@@ -6,6 +6,11 @@
     padding: 0px;
 }
 
-html{
-    font-family: 'CGothic';
+// html{
+//     font-family: 'CGothic', sans-serif;
+// }
+
+.home{
+  width: 100vw;
+  height: 100vh;
 }
