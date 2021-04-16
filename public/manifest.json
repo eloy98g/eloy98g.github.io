@@ -1,0 +1,13 @@
+{
+  "name": "eloy-gomez",
+  "short_name": "eloy-gomez",
+  "start_url": ".",
+  "description": "Eloy Gomez",
+  "icons": [
+      {
+          "src": "../src/styles/static/Icon.png",
+          "sizes": "48x48",
+          "type": "image/png"
+      }
+  ]
+}
