@@ -1,0 +1,13 @@
+/* @import url('http://db.onlinewebfonts.com/c/150037e11f159dca84bc4c04549094b6?family=Averta-Regular'); */
+
+@font-face {
+  font-family: 'Gothic';
+  src: local('Gothic'),
+    url('./fonts/century_gothic/gothic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Gothic-bold';
+  src: local('Gothic-bold'),
+    url('./fonts/century_gothic/gothic-bold.ttf') format('truetype');
+}
