@@ -8,31 +8,24 @@
   height: 100%;
   background-color: black;
   color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   font-size: 3rem;
 }
 
-.big-text{
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -30%);
-  font-size: 5rem;
-  color: white;
+.land-content{
+  display: flex;
+  flex-direction: column;
+  padding-top: 20%;
+  padding-left: 20%;
 }
 
 .intro{
   background: black;
   position: fixed;
   top: 0;
-  left: 0;
+  left: 20%;
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 

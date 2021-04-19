@@ -5,6 +5,11 @@
 //   src: local('CGothic'), url('./fonts/century_gothic/GOTHIC.TTF') format('truetype');
 // }
 
+@font-face {
+  font-family: 'Averta';
+  src: local('Averta'), url('./fonts/century_gothic/Averta-Regular.ttf') format('truetype');
+}
+
 // @font-face {
 //   font-family: 'CGothic-bold';
 //   src: local('CGothic-bold'), url('./fonts/century_gothic/GOTHICB.TTF') format('truetype');
