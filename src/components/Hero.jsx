@@ -11,7 +11,7 @@ const Hero = () => {
     tl.to('.intro', { y: '-100%', duration: 1 }, '-=1');
   });
   return (
-    <div className="hero">
+    <section className="hero">
       <div className="landing">
         <div className="land-content">
           <h1 className="name">Eloy Gómez</h1>
@@ -32,7 +32,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="slider" />
-    </div>
+    </section>
   );
 };
 
