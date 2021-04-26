@@ -32,6 +32,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="slider" />
+      <div className="scroll-down" />
     </section>
   );
 };

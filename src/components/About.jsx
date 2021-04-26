@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { Controller, Scene } from 'react-scrollmagic';
+import gsap from 'gsap';
 import '../styles/components/About.scss';
 import video from '../assets/video.mp4';
 // import image from "../styles/static/bird.png";
 
 const About = () => {
+  // const controller = new ScrollMagic.Controller();
   return (
     <section className="about-container">
       <div className="about">
@@ -12,9 +15,6 @@ const About = () => {
         </video>
         <div className="content">
           <div className="descrition">
-            <h1 className="hide">
-              <span className="text">Hola!</span>
-            </h1>
             <h1 className="hide">
               <span className="text">
                 Soy ingeniero informático especializado
