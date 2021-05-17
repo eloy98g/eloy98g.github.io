@@ -1,32 +1,24 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Controller, Scene } from 'react-scrollmagic';
 import gsap from 'gsap';
+import pp from '../assets/profpic.png';
 import '../styles/components/About.scss';
-import video from '../assets/video.mp4';
-// import image from "../styles/static/bird.png";
 
 const About = () => {
-  // const controller = new ScrollMagic.Controller();
   return (
-    <section className="about-container">
-      <div className="about">
-        <video className="video" loop autoPlay muted>
-          <source src={video} type="video/mp4" />
-        </video>
+    <section className="about">
+      <div className="content">
+        <div className="title">
+          <h1>Hola!</h1>
+          <h1>Soy Eloy</h1>
+        </div>
         <div className="content">
-          <div className="descrition">
-            <h1 className="hide">
-              <span className="text">
-                Soy ingeniero informático especializado
-              </span>
-            </h1>
-            <h1 className="hide">
-              <span className="text">en diseño y desarrollo de aplicaciones</span>
-            </h1>
-            <h1 className="hide">
-              <span className="text">tanto para web como para móvil</span>
-            </h1>
-          </div>
+          <h3>Soy ingeniero informático</h3>
+          <h3>Especializado en diseño y desarrollo de apps</h3>
+          <h3>tanto para web como para móvil</h3>
+        </div>
+        <div className="image">
+          <img src={pp} alt="" />
         </div>
       </div>
     </section>

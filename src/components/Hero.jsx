@@ -6,7 +6,7 @@ const Hero = () => {
   const tl = gsap.timeline({ defaults: { ease: 'power1.out' } });
 
   useEffect(() => {
-    tl.to('.text', { y: '0%', duration: 1, stagger: 0.25 });
+    tl.to('.text', { y: '0%', duration: 1, stagger: 0.17 });
     tl.to('.slider', { y: '-100%', duration: 1.5, delay: 0.5, display: "block"});
     tl.to('.intro', { y: '-100%', duration: 1 }, '-=1');
   });
@@ -21,18 +21,18 @@ const Hero = () => {
       <div className="intro">
         <div className="intro-text">
           <h1 className="hide">
-            <span className="text">Texto</span>
+            <span className="text">Aprende</span>
           </h1>
           <h1 className="hide">
-            <span className="text">Otro texto</span>
+            <span className="text">Imagina</span>
           </h1>
           <h1 className="hide">
-            <span className="text">Algo mas</span>
+            <span className="text">Crea</span>
           </h1>
         </div>
       </div>
       <div className="slider" />
-      <div className="scroll-down" />
+      
     </section>
   );
 };

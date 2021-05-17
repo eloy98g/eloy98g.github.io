@@ -1,12 +1,14 @@
+@import '../Vars.scss';
+
 .hero {
   width: 100%;
   height: 100%;
-  background-color: black;
+  background-color: $black;
   .landing {
     width: 100%;
     height: 100%;
 
-    color: white;
+    color: $white;
     font-size: 2.5rem;
     text-align: left;
     position: fixed;
@@ -19,7 +21,7 @@
   }
 
   .intro {
-    background: black;
+    background: $black;
     text-align: left;
     position: fixed;
     top: 0;
@@ -31,7 +33,7 @@
   }
 
   .slider {
-    background: white;
+    background: $white;
     position: fixed;
     top: 0;
     left: 0;
@@ -41,65 +43,18 @@
   }
 
   .intro-text {
-    color: rgb(233, 233, 233);
+    color: $white;
     font-size: 2.5rem;
   }
 
   .hide {
-    background: black;
+    background: $black;
     overflow: hidden;
   }
 
   .hide span {
     transform: translateY(100%);
     display: inline-block;
-  }
-
-  .scroll-down {
-    height: 50px;
-    width: 30px;
-    border: 2px solid white;
-    position: absolute;
-    left: 50%;
-    bottom: 20px;
-    border-radius: 50px;
-    cursor: pointer;
-  }
-  .scroll-down::before,
-  .scroll-down::after {
-    content: "";
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    height: 10px;
-    width: 10px;
-    transform: translate(-50%, -100%) rotate(45deg);
-    border: 2px solid white;
-    border-top: transparent;
-    border-left: transparent;
-    animation: scroll-down 1s ease-in-out infinite;
-  }
-  .scroll-down::before {
-    top: 30%;
-    animation-delay: 0.8s;
-    /* animation: scroll-down 1s ease-in-out infinite; */
-  }
-  
-  @keyframes scroll-down {
-    0% {
-      /* top:20%; */
-      opacity: 0;
-    }
-    30% {
-      opacity: 1;
-    }
-    60% {
-      opacity: 1;
-    }
-    100% {
-      top: 90%;
-      opacity: 0;
-    }
   }
   
 }
