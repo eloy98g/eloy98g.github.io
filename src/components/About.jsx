@@ -22,7 +22,7 @@ const About = () => {
           <div className="phrases">
             <h3 className="line">
               <span className="text">
-                Tengo 21 años. Soy ingeniero informático
+                Tengo 22 años. Soy ingeniero informático
               </span>
             </h3>
             <h3 className="line1">

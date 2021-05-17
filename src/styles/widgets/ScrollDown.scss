@@ -1,8 +1,9 @@
 .scroll-down {
+  display: none;
   height: 50px;
   width: 30px;
   border: 2px solid white;
-  position: absolute;
+  position: fixed;
   left: 50%;
   bottom: 20px;
   border-radius: 50px;

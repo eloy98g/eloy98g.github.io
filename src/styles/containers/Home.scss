@@ -8,6 +8,11 @@
 
 html {
   font-family: 'Gothic';
+  overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
+  display: none;
 }
 
 .home {
