@@ -1,15 +1,26 @@
 import React, { useEffect } from 'react';
 import gsap from 'gsap';
 import pp from '../assets/pp.png';
-
 import '../styles/components/About.scss';
 
 const About = () => {
-  const tl = gsap.timeline({ defauls: { ease: 'power1.out' } });
+  const tl = gsap.timeline({ defauls: { delay: 0.3, ease: 'power1.out' } });
 
-  // useEffect(() => {
-  //   tl.to('.top-slider', { y: '0%', duration: 1 });
-  // });
+  useEffect(() => {
+    tl.to(
+      '.underline',
+      {
+        top: '53%',
+        duration: 2,
+        scrollTrigger: {
+          trigger: '.line1',
+          start: 'top: 90%',
+          end: 'bottom 60%',
+          markers: true
+        },
+      },
+    );
+  });
 
   return (
     <section className="about">
@@ -28,6 +39,7 @@ const About = () => {
             <h3 className="line1">
               <span className="text">Especializado en diseño y desarrollo</span>
               <div className="underline" />
+              <div className="hide" />
             </h3>
             <h3 className="line">
               <span className="text">De aplicaciones móvil y web</span>
@@ -38,8 +50,6 @@ const About = () => {
       <div className="right-image">
         <img className="image" src={pp} alt="" />
       </div>
-      <div className="top-slider" />
-      <div className="bottom-slider" />
     </section>
   );
 };

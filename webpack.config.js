@@ -75,6 +75,8 @@ module.exports = {
       filename: './index.html',
     }),
   ],
+  cache: true,
+  mode: 'development',
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     compress: true,
