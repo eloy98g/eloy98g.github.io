@@ -13,12 +13,18 @@ const About = () => {
     gsap.to('.first', {
       width: '100%',
       duration: 1,
-      scrollTrigger: '.first',
+      scrollTrigger: {
+        trigger: '.first', 
+        toggleActions: 'restart none none none'
+      },
     });
     gsap.to('.second', {
       width: '100%',
       duration: 1,
-      scrollTrigger: '.second',
+      scrollTrigger: {
+        trigger: '.second',
+        toggleActions: 'restart none none none'
+      },
     }, '-=0.3');
   });
 
