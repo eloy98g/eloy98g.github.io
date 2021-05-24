@@ -9,6 +9,7 @@ const Hero = () => {
     window.scrollTo(0, 0);
     tl.set('body', { overflow: 'hidden' });
     tl.to('.text', { y: '0%', duration: 1 });
+    tl.to('body', { overflow: 'visible', duration: '0' });
     tl.to('.slider', {
       y: '-100%',
       duration: 2,
@@ -17,8 +18,8 @@ const Hero = () => {
     });
     tl.to('.intro', { y: '-100%', duration: 1 }, '-=1.5');
     tl.to('.land-content', { display: 'block' }, '-=1.5');
-    tl.to('body', { overflow: 'visible' });
     tl.to('.scroll-down', {  display: 'block', duration: '1' }, '-=1.5');
+    
   });
 
   return (
