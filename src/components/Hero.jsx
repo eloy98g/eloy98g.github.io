@@ -17,9 +17,9 @@ const Hero = () => {
     });
 
     tl.to('.intro', { y: '-100%', duration: 1 }, '-=1.5');
-    tl.to('.land-content', { display: 'block' }, '-=1.5');
+    tl.to('.land-content', { display: 'block' }, '-=1');
     tl.to('body', { overflow: 'visible' });
-    tl.to('.scroll-down', {  display: 'block' }, '-=1.5');
+    tl.to('.scroll-down', {  display: 'block', duration: '1' }, '-=1');
   });
 
   return (

@@ -1,0 +1,12 @@
+.underline-text {
+  position: relative;
+  .underline {
+    position: absolute;
+    top: 55%;
+    left: 0;
+    width: 0%;
+    height: 25px;
+    background-color: rgba(85, 67, 205, 0.4);
+    z-index: 0;
+  }
+}

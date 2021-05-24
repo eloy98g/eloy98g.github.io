@@ -1,25 +1,25 @@
 import React, { useEffect } from 'react';
 import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import pp from '../assets/pp.png';
+import UnderlinedText from '../widgets/UnderlinedText';
 import '../styles/components/About.scss';
 
-const About = () => {
-  const tl = gsap.timeline({ defauls: { delay: 0.3, ease: 'power1.out' } });
+gsap.registerPlugin(ScrollTrigger);
 
+const About = () => {
+  
   useEffect(() => {
-    tl.to(
-      '.underline',
-      {
-        top: '53%',
-        duration: 2,
-        scrollTrigger: {
-          trigger: '.line1',
-          start: 'top: 90%',
-          end: 'bottom 60%',
-          markers: true
-        },
-      },
-    );
+    gsap.to('.first', {
+      width: '100%',
+      duration: 1,
+      scrollTrigger: '.first',
+    });
+    gsap.to('.second', {
+      width: '100%',
+      duration: 1,
+      scrollTrigger: '.second',
+    }, '-=0.3');
   });
 
   return (
@@ -36,13 +36,17 @@ const About = () => {
                 Tengo 22 años. Soy ingeniero informático
               </span>
             </h3>
-            <h3 className="line1">
-              <span className="text">Especializado en diseño y desarrollo</span>
-              <div className="underline" />
-              <div className="hide" />
+            <h3 className="line">
+              <span className="text">Especializado en&nbsp;</span>
+              <UnderlinedText controller="first" text="diseño y desarrollo" />
             </h3>
             <h3 className="line">
-              <span className="text">De aplicaciones móvil y web</span>
+              <span className="text">De aplicaciones&nbsp;</span>
+              <UnderlinedText
+                controller="second"
+                text="movil y web"
+                style={{ backgroundColor: 'rgba(237, 72, 72, 0.4)' }}
+              />
             </h3>
           </div>
         </div>

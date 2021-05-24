@@ -20,7 +20,6 @@
     align-items: center;
     height: 100%;
     width: 60%;
-    z-index: 3;
 
     .title {
       font-size: 40px;
@@ -36,36 +35,13 @@
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
+      line-height: 72px;
+      font-size: 32px;
 
-      .line1{
+      .line {
         position: relative;
-
-        .underline{
-          position: absolute;
-          top: 80%;
-          left: 43%;
-          width: 45%;
-          height: 25px;
-          background-color: rgba(85, 67, 205, 0.4);
-          z-index: 1;
-        }
-
-        .hide{
-          z-index: 2;
-          position: absolute;
-          top: 80%;
-          left: 43%;
-          width: 45%;
-          height: 30px;
-          background-color: $white;
-        }
-
-        
-      }
-      
-      .text {
-        line-height: 72px;
-        font-size: 40px;
+        display: flex;
+        flex-direction: row;
       }
     }
   }
