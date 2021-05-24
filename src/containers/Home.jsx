@@ -6,7 +6,6 @@ import '../styles/containers/Home.scss';
 import ScrollDown from '../widgets/ScrollDown';
 
 const Home = () => {
-
   return (
     <div className="home">
       <Hero />
