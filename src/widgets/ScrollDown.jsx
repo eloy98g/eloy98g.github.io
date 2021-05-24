@@ -1,10 +1,8 @@
-import React from 'react'
+import React from 'react';
 import '../styles/widgets/ScrollDown.scss';
 
 function ScrollDown() {
-  return (
-    <div className="scroll-down" />
-  )
+  return <div className="scroll-down" />;
 }
 
-export default ScrollDown
+export default ScrollDown;

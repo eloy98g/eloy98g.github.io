@@ -8,38 +8,41 @@ import '../styles/components/About.scss';
 gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
-  
   useEffect(() => {
     gsap.to('.copy', {
       opacity: 1,
       duration: 2,
       scrollTrigger: {
-        trigger: '.copy', 
-        toggleActions: 'restart'
+        trigger: '.copy',
+        toggleActions: 'restart',
       },
     });
     gsap.to('.first', {
       width: '100%',
       duration: 1,
       scrollTrigger: {
-        trigger: '.first', 
-        toggleActions: 'restart'
+        trigger: '.first',
+        toggleActions: 'restart',
       },
     });
-    gsap.to('.second', {
-      width: '100%',
-      duration: 1,
-      scrollTrigger: {
-        trigger: '.second',
-        toggleActions: 'restart'
+    gsap.to(
+      '.second',
+      {
+        width: '100%',
+        duration: 1,
+        scrollTrigger: {
+          trigger: '.second',
+          toggleActions: 'restart',
+        },
       },
-    }, '-=0.3');
+      '-=0.3'
+    );
     gsap.to('.title', {
       opacity: 1,
       duration: 2,
       scrollTrigger: {
-        trigger: '.title', 
-        toggleActions: 'restart'
+        trigger: '.title',
+        toggleActions: 'restart',
       },
     });
   });

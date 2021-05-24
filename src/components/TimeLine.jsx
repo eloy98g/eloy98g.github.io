@@ -6,8 +6,6 @@ import '../styles/components/TimeLine.scss';
 gsap.registerPlugin(ScrollTrigger);
 
 const TimeLine = () => {
-  
-
   useEffect(() => {
     const timeline = gsap.timeline({
       scrollTrigger: {
