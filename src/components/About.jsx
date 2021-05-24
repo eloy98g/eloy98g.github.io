@@ -10,12 +10,20 @@ gsap.registerPlugin(ScrollTrigger);
 const About = () => {
   
   useEffect(() => {
+    gsap.to('.copy', {
+      opacity: 1,
+      duration: 2,
+      scrollTrigger: {
+        trigger: '.copy', 
+        toggleActions: 'restart'
+      },
+    });
     gsap.to('.first', {
       width: '100%',
       duration: 1,
       scrollTrigger: {
         trigger: '.first', 
-        toggleActions: 'restart none none none'
+        toggleActions: 'restart'
       },
     });
     gsap.to('.second', {
@@ -23,9 +31,17 @@ const About = () => {
       duration: 1,
       scrollTrigger: {
         trigger: '.second',
-        toggleActions: 'restart none none none'
+        toggleActions: 'restart'
       },
     }, '-=0.3');
+    gsap.to('.title', {
+      opacity: 1,
+      duration: 2,
+      scrollTrigger: {
+        trigger: '.title', 
+        toggleActions: 'restart'
+      },
+    });
   });
 
   return (
