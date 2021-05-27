@@ -30,7 +30,7 @@
     top: 50%;
     background-color: transparent;
 
-    .ybar{
+    .ybar {
       position: absolute;
       top: 50%;
       color: white;
@@ -43,14 +43,27 @@
 
     .img {
       opacity: 0;
-      position: inherit;
-      top: 0;
-      left: 0;
+      position: relative;
+      top: 110%;
       transform: rotatex(-180deg);
+    }
+
+    .text {
+      position: relative;
+      opacity: 0;
+      top: -90px;
+      left: 20px;
+      transform: rotatex(180deg);
+      width: 120px;
+      font-weight: bold;
     }
 
     .uco {
       left: 25%;
+
+      .img {
+        left: -32px;
+      }
     }
 
     .clapfy {
@@ -58,14 +71,22 @@
       transform: rotatex(0deg);
       transform-origin: bottom;
 
-      .img{
+      .img {
         transform: rotatex(0deg);
-      
+        left: -50px;
+      }
+
+      .text {
+        transform: rotatex(0deg);
       }
     }
 
     .labora {
       left: 75%;
+
+      .img {
+        left: -50px;
+      }
     }
   }
 }
