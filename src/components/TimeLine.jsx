@@ -45,6 +45,14 @@ const TimeLine = () => {
       },
       '-=3'
     );
+    timeline.to(
+      '.img',
+      {
+        pointerEvents: 'auto',
+        stagger: 0.5,
+        ease: 'Power1.easeOut',
+      },
+    );
   });
 
   return (
@@ -59,7 +67,13 @@ const TimeLine = () => {
             alt="uco"
           />
           <p className="text">2016</p>
-          <HoverPopup />
+          <HoverPopup
+            vertical
+            title="UCO"
+            description="Universidad de Córdoba"
+            resume="Ingeniería informática en la UCO con mención en computadores"
+            trigger="uco"
+          />
         </div>
         <div className="clapfy ybar">
           <img
@@ -70,7 +84,12 @@ const TimeLine = () => {
             alt="clapfy"
           />
           <p className="text">Oct 20 / Abr 21</p>
-          <HoverPopup />
+          <HoverPopup
+            title="Clapfy"
+            description="Madrid. Empresa de consultoría b2b"
+            resume="Tras una fase de formación frontend a nivel profesional, trabajé con un equipo en el que apliqué metodologías ágiles tanto en diseño como en desarrollo de proyectos en producción"
+            trigger="clapfy"
+          />
         </div>
         <p className="labora ybar">
           <img
@@ -81,7 +100,12 @@ const TimeLine = () => {
             alt="labora"
           />
           <p className="text">Abr 21 - now</p>
-          <HoverPopup />
+          <HoverPopup
+            title="Labora"
+            description="Madrid. Startup"
+            resume="Junto al equipo de Clapfy, comenzamos a desarrollar un producto propio destinado a facilitar al máximo las contrataciones de las empresas"
+            trigger="labora"
+          />
         </p>
       </div>
       <div className="line" />
