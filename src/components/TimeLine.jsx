@@ -45,27 +45,26 @@ const TimeLine = () => {
       },
       '-=3'
     );
-    timeline.to(
-      '.img',
-      {
-        pointerEvents: 'auto',
-        stagger: 0.5,
-        ease: 'Power1.easeOut',
-      },
-    );
+    timeline.to('.img', {
+      pointerEvents: 'auto',
+      stagger: 0.5,
+      ease: 'Power1.easeOut',
+    });
   });
 
   return (
     <div className="timeline">
       <div className="trigger">
         <div className="uco ybar">
-          <img
-            width="70px"
-            height="100px"
-            className="img"
-            src={uco}
-            alt="uco"
-          />
+          <a href="http://www.uco.es/" target="_blanck">
+            <img
+              width="70px"
+              height="100px"
+              className="img"
+              src={uco}
+              alt="uco"
+            />
+          </a>
           <p className="text">2016</p>
           <HoverPopup
             vertical
@@ -76,14 +75,16 @@ const TimeLine = () => {
           />
         </div>
         <div className="clapfy ybar">
-          <img
-            width="100px"
-            height="100px"
-            className="img"
-            src={clapfy}
-            alt="clapfy"
-          />
-          <p className="text">Oct 20 / Abr 21</p>
+          <a href="https://clapfy.es/" target="_blanck">
+            <img
+              width="100px"
+              height="100px"
+              className="img"
+              src={clapfy}
+              alt="clapfy"
+            />
+          </a>
+          <p className="text">Oct 20 - Abr 21</p>
           <HoverPopup
             title="Clapfy"
             description="Madrid. Empresa de consultoría b2b"
@@ -92,13 +93,15 @@ const TimeLine = () => {
           />
         </div>
         <p className="labora ybar">
-          <img
-            width="100px"
-            height="100px"
-            className="img"
-            src={labora}
-            alt="labora"
-          />
+          <a href="https://www.labora.app/" target="_blanck">
+            <img
+              width="100px"
+              height="100px"
+              className="img"
+              src={labora}
+              alt="labora"
+            />
+          </a>
           <p className="text">Abr 21 - now</p>
           <HoverPopup
             title="Labora"

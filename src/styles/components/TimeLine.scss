@@ -40,7 +40,7 @@
       transform: rotatex(180deg);
       transform-origin: top;
 
-      .img:hover{
+      a:hover{
         ~.popup{
           opacity: 1;
         }
