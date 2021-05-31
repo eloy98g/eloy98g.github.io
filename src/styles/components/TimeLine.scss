@@ -14,6 +14,16 @@
   padding: 100px 0px;
   position: relative;
 
+  .tl_title{
+    opacity: 0;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+  }
+
   .line {
     width: 100%;
     height: 5px;

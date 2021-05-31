@@ -11,10 +11,19 @@ gsap.registerPlugin(ScrollTrigger);
 
 const TimeLine = () => {
   useEffect(() => {
-    const timeline = gsap.timeline({
+    gsap.to('.tl_title', {
+      opacity: 1,
+      duration: 2,
       scrollTrigger: {
         trigger: '.trigger',
-        start: 'top 60%',
+        start: 'top 90%',
+      },
+    })
+    const timeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.tl_title',
+        markers: true,
+        start: 'top 50%',
       },
       ease: 'Power0.easeNone',
     });
@@ -43,7 +52,7 @@ const TimeLine = () => {
         stagger: 0.5,
         ease: 'Power1.easeOut',
       },
-      '-=3'
+      '-=4'
     );
     timeline.to('.img', {
       pointerEvents: 'auto',
@@ -54,9 +63,10 @@ const TimeLine = () => {
 
   return (
     <div className="timeline">
+      <p className="tl_title">El recorrido</p>
       <div className="trigger">
         <div className="uco ybar">
-          <a href="http://www.uco.es/" target="_blanck">
+          <a href="http://www.uco.es/" className='link' target="_blanck">
             <img
               width="70px"
               height="100px"
@@ -75,7 +85,7 @@ const TimeLine = () => {
           />
         </div>
         <div className="clapfy ybar">
-          <a href="https://clapfy.es/" target="_blanck">
+          <a href="https://clapfy.es/" className='link' target="_blanck">
             <img
               width="100px"
               height="100px"
@@ -93,7 +103,7 @@ const TimeLine = () => {
           />
         </div>
         <p className="labora ybar">
-          <a href="https://www.labora.app/" target="_blanck">
+          <a href="https://www.labora.app/" className='link' target="_blanck">
             <img
               width="100px"
               height="100px"

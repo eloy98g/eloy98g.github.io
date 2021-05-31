@@ -34,13 +34,10 @@ const Hero = () => {
       <div className="intro">
         <div className="intro-text">
           <h1 className="hide">
-            <span className="text">Aprende</span>
+            <span className="text">Si puede imaginarse,</span>
           </h1>
           <h1 className="hide">
-            <span className="text">Imagina</span>
-          </h1>
-          <h1 className="hide">
-            <span className="text">Crea</span>
+            <span className="text">Puede ser creado</span>
           </h1>
         </div>
       </div>
