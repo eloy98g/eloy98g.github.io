@@ -77,6 +77,7 @@ const About = () => {
         </div>
       </div>
       <div className="right-image">
+        <div className="shape" />
         <img className="image" src={pp} alt="" />
       </div>
     </section>

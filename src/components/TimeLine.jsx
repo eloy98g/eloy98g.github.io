@@ -22,7 +22,6 @@ const TimeLine = () => {
     const timeline = gsap.timeline({
       scrollTrigger: {
         trigger: '.tl_title',
-        markers: true,
         start: 'top 50%',
       },
       ease: 'Power0.easeNone',
@@ -97,7 +96,7 @@ const TimeLine = () => {
           <p className="text">Oct 20 - Abr 21</p>
           <HoverPopup
             title="Clapfy"
-            description="Madrid. Empresa de consultoría b2b"
+            description="Madrid. Consultora b2b"
             resume="Tras una fase de formación frontend a nivel profesional, trabajé con un equipo en el que apliqué metodologías ágiles tanto en diseño como en desarrollo de proyectos en producción"
             trigger="clapfy"
           />

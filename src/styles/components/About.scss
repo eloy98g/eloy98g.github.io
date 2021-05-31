@@ -1,4 +1,5 @@
 @import '../Vars.scss';
+@import '../Media.scss';
 
 .about {
   display: none;
@@ -28,6 +29,7 @@
       line-height: 78px;
       width: 100%;
       height: 100%;
+      margin-bottom: 50px;
     }
 
     .copy {
@@ -39,7 +41,7 @@
       justify-content: flex-start;
       align-items: flex-start;
       line-height: 72px;
-      font-size: 32px;
+      font-size: 28px;
 
       .line {
         position: relative;
@@ -50,8 +52,19 @@
   }
 
   .right-image {
-    width: 40vw;
+    width: 40%;
     height: 100vh;
+    position: relative;
+
+    .shape {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 0;
+      height: 0;
+      border-bottom: 100vh solid $white;
+      border-right: 10vw solid transparent;
+    }
   }
 
   .image {
@@ -73,5 +86,61 @@
     top: 0;
     left: 0;
     transform: translateY(-100%);
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .about {
+    padding: 50px 0px;
+    .content {
+      padding-left: 50px;
+      .title {
+        font-size: 36px;
+        line-height: 78px;
+      }
+
+      .copy {
+        font-size: 24px;
+        line-height: 56px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .about {
+    .content {
+      width: 100%;
+    
+      .title {
+        font-size: 32px;
+        line-height: 56px;
+      }
+
+      .copy {
+        font-size: 3.5vw;
+        line-height: 56px;
+      }
+    }
+    .right-image{
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 456px) {
+  .about {
+    .content {
+      padding-left: 20px;
+
+      .title {
+        font-size: 24px;
+        line-height: 36px;
+      }
+
+      .copy {
+        line-height: 48px;
+      }
+    }
   }
 }

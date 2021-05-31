@@ -28,8 +28,6 @@ const Hero = () => {
           <h1 className="name">Eloy Gómez</h1>
           <h1 className="bullshit">Mobile & Web Developer</h1>
         </div>
-
-        {/* <div className="button">Launch it!</div> */}
       </div>
       <div className="intro">
         <div className="intro-text">
