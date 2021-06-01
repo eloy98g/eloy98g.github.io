@@ -62,7 +62,7 @@ const About = () => {
               </span>
             </h3>
             <h3 className="line">
-              <span className="text">Especializado en&nbsp;</span>
+              <span className="text">Dedicado al&nbsp;</span>
               <UnderlinedText controller="first" text="diseño y desarrollo" />
             </h3>
             <h3 className="line">
