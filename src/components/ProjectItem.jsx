@@ -1,14 +1,28 @@
-import React from 'react'
+import React from 'react';
 
-// Style
-import '../styles/components/Projects.scss';
-
+// Logos
 import github from '../assets/logos/github.png';
 
-const ProjectItem = ({data}) => {
-  const { title, subtitle, desc, team, techs, images } = data;
+const ProjectItem = ({ data }) => {
+  const { title, subtitle, desc, team, techs, images, headers } = data;
   return (
     <div className="project">
+      <div className="hide top">
+        <p className="hide-title">{title}</p>
+        <p className="hide-subtitle">{subtitle}</p>
+      </div>
+      <div className="hide bottom">
+        {headers.map((e) => {
+          return (
+            <img
+              key={headers.indexOf(e)}
+              className="hide-logo"
+              src={e}
+              alt="logo"
+            />
+          );
+        })}
+      </div>
       <div className="description">
         <div className="header">
           <p className="title">{title}</p>
@@ -44,6 +58,6 @@ const ProjectItem = ({data}) => {
       </div>
     </div>
   );
-}
+};
 
-export default ProjectItem
+export default ProjectItem;

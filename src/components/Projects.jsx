@@ -27,7 +27,7 @@ const Projects = () => {
       },
     });
   });
-  console.log('projects:',initialState.projects)
+  
   return (
     <div className="projects">
       <p className="pr_title">Proyectos</p>

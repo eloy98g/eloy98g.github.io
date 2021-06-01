@@ -11,6 +11,9 @@ import redux from '../assets/logos/redux.png';
 import mobile1 from '../assets/projects/mcdo/1.png';
 import mobile2 from '../assets/projects/mcdo/2.png';
 import mobile3 from '../assets/projects/mcdo/3.png';
+import labora from '../assets/labora.png';
+import mcdologo from '../assets/mcdologo.png';
+import clapfy from '../assets/clapfy.png'
 
 const initialState = {
   projects: [
@@ -29,6 +32,7 @@ const initialState = {
         { icon: ios, name: 'iOS' }
       ],
       images: [mobile1, mobile2, mobile3],
+      headers: [clapfy, mcdologo]
     },
     {
       title: 'Ronald Mcdonald',
@@ -44,6 +48,7 @@ const initialState = {
         { icon: web, name: 'Web' }
       ],
       images: [mobile1, mobile2, mobile3],
+      headers: [clapfy, mcdologo]
     },
     {
       title: 'Labora',
@@ -57,6 +62,7 @@ const initialState = {
         { icon: ios, name: 'iOS' }
       ],
       images: [mobile1, mobile2, mobile3],
+      headers: [labora]
     },
     {
       title: 'Labora',
@@ -69,6 +75,7 @@ const initialState = {
         { icon: web, name: 'Web' }
       ],
       images: [mobile1, mobile2, mobile3],
+      headers: [labora]
     }
   ],
 };
