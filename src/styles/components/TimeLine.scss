@@ -19,7 +19,7 @@
     position: absolute;
     top: 100px;
     left: 100px;
-    color: white;
+    color: $white;
     font-size: 40px;
     font-weight: bold;
   }
@@ -43,7 +43,7 @@
     .ybar {
       position: absolute;
       top: 50%;
-      color: white;
+      color: $white;
       height: 0px;
       width: 5px;
       background-color: $white;

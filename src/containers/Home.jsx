@@ -7,6 +7,7 @@ import About from '../components/About';
 import TimeLine from '../components/TimeLine';
 import Projects from '../components/Projects';
 import Knowledge from '../components/Knowledge';
+import Contact from '../components/Contact';
 
 // Widget
 import ScrollDown from '../widgets/ScrollDown';
@@ -18,11 +19,12 @@ import '../styles/containers/Home.scss';
 const Home = () => {
   return (
     <div className="home">
-      {/* <Hero /> */}
+      <Hero />
       <About />
       <TimeLine />
       <Projects />
       <Knowledge />
+      <Contact />
       <ScrollDown />
     </div>
   );

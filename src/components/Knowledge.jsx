@@ -37,12 +37,12 @@ const Knowledge = () => {
       <p className="knw_title">Conocimientos</p>
       <p className="subtitle">Lenguajes y librerías </p>
       <div className="content">
-        <Item img={htmlcss} text="Html & Css" />
         <Item img={js} text="Javascript" />
         <Item img={sass} text="Sass" />
         <Item img={cpp} text="C++" />
         <Item img={gsap} text="GSAP" />
         <Item img={flutter} text="Flutter" />
+        <Item img={htmlcss} text="Responsive design" />
         <Item img={react} text="React JS" />
         <Item img={react} text="React Native" />
         <Item img={redux} text="React Redux" />

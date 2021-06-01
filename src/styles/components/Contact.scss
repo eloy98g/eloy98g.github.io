@@ -1,0 +1,38 @@
+@import '../Vars.scss';
+
+.contact{
+  width: 100vw;
+  margin: 0;
+  background-color: $black;
+  color: $white;
+  padding: 100px 100px;
+
+  .title{
+    color: $white;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 100px;
+  }
+
+  .media_container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .media{
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background-color: darken($black, 5%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img{
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+      }
+    }
+  }
+}
