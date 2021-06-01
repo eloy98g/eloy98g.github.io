@@ -16,7 +16,10 @@
 
   .content {
     display: flex;
-    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    justify-content: space-between;
     gap: 50px;
     .project {
       width: 500px;

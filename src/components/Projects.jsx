@@ -122,7 +122,7 @@ const Projects = () => {
                   className="user"
                   target="blank"
                 >
-                  <img src={github} alt="" title="Jesús Rodríguez" />
+                  <img src={github} alt="" title="Pablo Peralta" />
                 </a>
               </div>
             </div>
@@ -148,7 +148,7 @@ const Projects = () => {
             </div>
             <div className="details">
               <p className='desc'>
-                App de búsqueda de trabajos temporales
+                Panel de control web de gestión privada de la empresa
               </p>
               <div className="team">
                 <p>Resto del equipo: </p>
@@ -164,8 +164,7 @@ const Projects = () => {
             <div className="tech">
               <img src={react} alt="" className="logo" title="React" />
               <img src={redux} alt="" className="logo" title="React Redux" />
-              <img src={android} alt="" className="logo" title="Android" />
-              <img src={ios} alt="" className="logo" title="iOS" />
+              <img src={web} alt="" className="logo" title="Web" />
             </div>
           </div>
           <div className="images">
