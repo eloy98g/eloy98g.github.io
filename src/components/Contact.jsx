@@ -5,9 +5,9 @@ import React from 'react';
 import '../styles/components/Contact.scss';
 
 // Logos
-import github from '../assets/techs/github.png';
-import mail from '../assets/techs/mail.png';
-import linkedin from '../assets/techs/linkedin.png';
+import github from '../assets/logos/github.png';
+import mail from '../assets/logos/mail.png';
+import linkedin from '../assets/logos/linkedin.png';
 
 const Contact = () => {
   return (

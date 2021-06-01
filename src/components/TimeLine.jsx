@@ -1,11 +1,20 @@
+// React
 import React, { useEffect } from 'react';
+
+// Animation
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import '../styles/components/TimeLine.scss';
+
+// Widgets
+import HoverPopup from '../widgets/HoverPopup';
+
+// Assets
 import uco from '../assets/uco.png';
 import clapfy from '../assets/clapfy.png';
 import labora from '../assets/labora.png';
-import HoverPopup from '../widgets/HoverPopup';
+
+// Styles
+import '../styles/components/TimeLine.scss';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -18,7 +27,7 @@ const TimeLine = () => {
         trigger: '.tl_title',
         start: 'top 100%',
       },
-    })
+    });
     const timeline = gsap.timeline({
       scrollTrigger: {
         trigger: '.trigger',
@@ -65,7 +74,7 @@ const TimeLine = () => {
       <p className="tl_title">El recorrido</p>
       <div className="trigger">
         <div className="uco ybar">
-          <a href="http://www.uco.es/" className='link' target="blank">
+          <a href="http://www.uco.es/" className="link" target="blank">
             <img
               width="70px"
               height="100px"
@@ -84,7 +93,7 @@ const TimeLine = () => {
           />
         </div>
         <div className="clapfy ybar">
-          <a href="https://clapfy.es/" className='link' target="blank">
+          <a href="https://clapfy.es/" className="link" target="blank">
             <img
               width="100px"
               height="100px"
@@ -102,7 +111,7 @@ const TimeLine = () => {
           />
         </div>
         <p className="labora ybar">
-          <a href="https://www.labora.app/" className='link' target="blank">
+          <a href="https://www.labora.app/" className="link" target="blank">
             <img
               width="100px"
               height="100px"

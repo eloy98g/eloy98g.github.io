@@ -5,20 +5,20 @@ import React from 'react';
 import '../styles/components/Knowledge.scss';
 
 // Logos
-import flutter from '../assets/techs/flutter.png';
-import firebase from '../assets/techs/firebase.png';
-import github from '../assets/techs/github.png';
-import react from '../assets/techs/react.png';
-import redux from '../assets/techs/redux.png';
-import bash from '../assets/techs/bash.png';
-import cpp from '../assets/techs/cpp.png';
-import figma from '../assets/techs/figma.png';
-import gsap from '../assets/techs/gsap.png';
-import js from '../assets/techs/js.png';
-import linux from '../assets/techs/linux.png';
-import sass from '../assets/techs/sass.png';
-import htmlcss from '../assets/techs/htmlcss.png';
-import ingles from '../assets/techs/ingles.png';
+import flutter from '../assets/logos/flutter.png';
+import firebase from '../assets/logos/firebase.png';
+import github from '../assets/logos/github.png';
+import react from '../assets/logos/react.png';
+import redux from '../assets/logos/redux.png';
+import bash from '../assets/logos/bash.png';
+import cpp from '../assets/logos/cpp.png';
+import figma from '../assets/logos/figma.png';
+import gsap from '../assets/logos/gsap.png';
+import js from '../assets/logos/js.png';
+import linux from '../assets/logos/linux.png';
+import sass from '../assets/logos/sass.png';
+import htmlcss from '../assets/logos/htmlcss.png';
+import ingles from '../assets/logos/ingles.png';
 
 const Item = ({ img, text }) => {
   return (

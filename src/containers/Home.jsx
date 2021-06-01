@@ -19,8 +19,8 @@ import '../styles/containers/Home.scss';
 const Home = () => {
   return (
     <div className="home">
-      <Hero />
-      <About />
+      {/* <Hero /> */}
+      {/* <About /> */}
       <TimeLine />
       <Projects />
       <Knowledge />
