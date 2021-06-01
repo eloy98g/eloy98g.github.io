@@ -15,14 +15,14 @@ const TimeLine = () => {
       opacity: 1,
       duration: 2,
       scrollTrigger: {
-        trigger: '.trigger',
+        trigger: '.tl_title',
         start: 'top 100%',
       },
     })
     const timeline = gsap.timeline({
       scrollTrigger: {
-        trigger: '.tl_title',
-        start: 'top 50%',
+        trigger: '.trigger',
+        start: 'top 100%',
       },
       ease: 'Power0.easeNone',
     });

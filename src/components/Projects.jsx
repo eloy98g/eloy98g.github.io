@@ -13,7 +13,6 @@ import android from '../assets/techs/android.png';
 import ios from '../assets/techs/ios.png';
 import github from '../assets/techs/github.png';
 import react from '../assets/techs/react.png';
-import reactnative from '../assets/techs/reactnative.png';
 import web from '../assets/techs/web.png';
 import redux from '../assets/techs/redux.png';
 
@@ -158,7 +157,7 @@ const Projects = () => {
                   className="user"
                   target="blank"
                 >
-                  <img src={github} alt="" title="Jesús Rodríguez" />
+                  <img src={github} alt="" title="Pablo Peralta" />
                 </a>
               </div>
             </div>

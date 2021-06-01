@@ -9,7 +9,7 @@ import ScrollDown from '../widgets/ScrollDown';
 const Home = () => {
   return (
     <div className="home">
-      {/* <Hero /> */}
+      <Hero />
       <About />
       <TimeLine />
       <Projects />
