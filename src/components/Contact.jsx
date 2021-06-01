@@ -12,7 +12,7 @@ import linkedin from '../assets/logos/linkedin.png';
 const Contact = () => {
   return (
     <div className="contact">
-      <p className="title">¿Quieres colaborar?</p>
+      <p className="title">¿Colaboramos?</p>
       <div className="media_container">
         <a href="https://github.com/eloy98g" className="media" target="blank">
           <img src={github} alt="" title="Github" target="blank" />
