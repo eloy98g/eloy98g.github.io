@@ -4,14 +4,38 @@ import React from 'react';
 import github from '../assets/logos/github.png';
 
 const ProjectItem = ({ data }) => {
-  const { title, subtitle, desc, team, techs, images, headers } = data;
+  const { id, title, subtitle, desc, team, techs, images, headers } = data;
+
+  const setEnter = () => {
+    const top = document.getElementById(`top${id}`);
+    const bottom = document.getElementById(`bottom${id}`);
+    top.setAttribute('style', 'transform: translateY(-100%);');
+    bottom.setAttribute('style', 'transform: translateY(100%);');
+  };
+
+  const setLeave = () => {
+    const top = document.getElementById(`top${id}`);
+    const bottom = document.getElementById(`bottom${id}`);
+    top.setAttribute('style', 'transform: translateY(0);');
+    bottom.setAttribute('style', 'transform: translateY(0);');
+  };
+
   return (
-    <div className="project">
-      <div className="hide top">
+    <div
+      className="project"
+      onMouseEnter={() => setEnter()}
+      onMouseLeave={() => setLeave()}
+    >
+      <div className="hide top" id={`top${id}`}>
         <p className="hide-title">{title}</p>
         <p className="hide-subtitle">{subtitle}</p>
       </div>
-      <div className="hide bottom">
+      <div
+        className="hide bottom"
+        id={`bottom${id}`}
+        onMouseEnter={() => setEnter()}
+        onMouseLeave={() => setLeave()}
+      >
         {headers.map((e) => {
           return (
             <img

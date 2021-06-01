@@ -18,6 +18,7 @@ import clapfy from '../assets/clapfy.png'
 const initialState = {
   projects: [
     {
+      id: 1,
       title: 'Ronald Mcdonald',
       subtitle: 'Mobile App',
       desc: 'App móvil de información para las familias que hacen uso de los servicios de la Fundación Ronald McDonald',
@@ -35,6 +36,7 @@ const initialState = {
       headers: [clapfy, mcdologo]
     },
     {
+      id: 2,
       title: 'Ronald Mcdonald',
       subtitle: 'Dashboard web',
       desc: 'Panel de control web de gestión de la Fundación Ronald McDonald',
@@ -51,6 +53,7 @@ const initialState = {
       headers: [clapfy, mcdologo]
     },
     {
+      id: 3,
       title: 'Labora',
       subtitle: 'Workers app',
       desc: 'App de búsqueda de trabajos temporales',
@@ -65,6 +68,7 @@ const initialState = {
       headers: [labora]
     },
     {
+      id: 4,
       title: 'Labora',
       subtitle: 'Dashboard web',
       desc: 'Panel de control web de gestión privada de las empresas',
