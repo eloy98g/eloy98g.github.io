@@ -20,7 +20,7 @@
     flex-direction: row;
     flex-flow: row wrap;
     justify-content: space-between;
-    gap: 50px;
+    gap: 20px;
 
     .project {
       position: relative;
@@ -40,6 +40,7 @@
         position: absolute;
         padding: 20px;
         background-color: lighten($accent, 10%);
+        text-align: center;
         .hide-title {
           font-size: 36px;
           font-weight: bold;
@@ -128,6 +129,136 @@
         img {
           flex: 1;
           object-fit: cover;
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 1280px) {
+  .projects {
+    padding: 100px 50px;
+
+    .content{
+      gap: 20px;
+      
+      .project{
+        width: 290px;
+        height: 350px;
+
+        .description{
+          .header{
+            .title{
+              font-size: 28px;
+            }
+            .subtitle {
+              font-size: 18px;
+            }
+          }
+
+          .details {
+            .desc{
+              font-size: 12px;
+            }
+            .team {
+              margin-top: 10px;
+
+              p{
+                font-size: 12px;
+              }
+            }
+          }
+
+          .tech {
+            .logo {
+              height: 25px;
+              width: 25px;
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .projects {
+    .content{      
+      .project{
+        width: 350px;
+        height: 400px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .projects {
+    .content{      
+      .project{
+        width: 300px;
+        height: 350px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .projects {
+    .content{     
+      justify-content: center; 
+      .project{
+        width: 400px;
+        height: 500px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .projects {
+    padding: 100px 20px;
+    .pr_title {
+      font-size: 32px;
+    }
+
+    .content{     
+      justify-content: center; 
+      .project{
+        width: 100vw;
+        height: 116vw;
+
+        .hide {
+          .hide-title {
+            font-size: 24px;
+            font-weight: bold;
+          }
+          .hide-subtitle {
+            font-size: 18px;
+          }
+
+          .hide-logo {
+            width: 75px;
+            height: 75px;
+          }
+        }
+        .description{
+          .header{
+            .title{
+              font-size: 18px;
+            }
+            .subtitle {
+              font-size: 12px;
+            }
+          }
+
+          .details {
+            .team {
+              display: none;
+            }
+          }
         }
       }
     }

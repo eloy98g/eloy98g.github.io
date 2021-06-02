@@ -19,6 +19,7 @@ import '../styles/components/TimeLine.scss';
 gsap.registerPlugin(ScrollTrigger);
 
 const TimeLine = () => {
+  
   useEffect(() => {
     gsap.to('.tl_title', {
       opacity: 1,
@@ -39,11 +40,19 @@ const TimeLine = () => {
       left: '0%',
       duration: 1.5,
     });
-    timeline.to('.ybar', {
-      height: '40px',
-      duration: 0.5,
-      stagger: 0.5,
-    });
+    if(window.innerWidth > 480){
+      timeline.to('.ybar', {
+        height: '40px',
+        duration: 0.5,
+        stagger: 0.5,
+      });
+    }else{
+      timeline.to('.ybar', {
+        height: '20px',
+        duration: 0.5,
+        stagger: 0.5,
+      });
+    }
     timeline.to(
       '.img',
       {
@@ -75,13 +84,7 @@ const TimeLine = () => {
       <div className="trigger">
         <div className="uco ybar">
           <a href="http://www.uco.es/" className="link" target="blank">
-            <img
-              width="70px"
-              height="100px"
-              className="img"
-              src={uco}
-              alt="uco"
-            />
+            <img className="img" src={uco} alt="uco" />
           </a>
           <p className="text">2016</p>
           <HoverPopup
@@ -94,13 +97,7 @@ const TimeLine = () => {
         </div>
         <div className="clapfy ybar">
           <a href="https://clapfy.es/" className="link" target="blank">
-            <img
-              width="100px"
-              height="100px"
-              className="img"
-              src={clapfy}
-              alt="clapfy"
-            />
+            <img className="img" src={clapfy} alt="clapfy" />
           </a>
           <p className="text">Oct 20 - Abr 21</p>
           <HoverPopup
@@ -112,13 +109,7 @@ const TimeLine = () => {
         </div>
         <p className="labora ybar">
           <a href="https://www.labora.app/" className="link" target="blank">
-            <img
-              width="100px"
-              height="100px"
-              className="img"
-              src={labora}
-              alt="labora"
-            />
+            <img className="img" src={labora} alt="labora" />
           </a>
           <p className="text">Abr 21 - now</p>
           <HoverPopup

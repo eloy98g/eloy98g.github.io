@@ -21,7 +21,7 @@ const initialState = {
       id: 1,
       title: 'Ronald Mcdonald',
       subtitle: 'Mobile App',
-      desc: 'App móvil de información para las familias que hacen uso de los servicios de la Fundación Ronald McDonald',
+      desc: 'App para las familias que hacen uso de los servicios de la Fundación',
       team: [
         { user: 'jesusrp98', name: 'Jesús Rodríguez' },
         { user: 'veves', name: 'Veves' }

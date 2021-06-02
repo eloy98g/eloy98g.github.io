@@ -45,6 +45,7 @@
       font-size: 28px;
 
       .line {
+        width: 100%;
         position: relative;
         display: flex;
         flex-direction: row;
@@ -63,7 +64,7 @@
       bottom: 0;
       width: 0;
       height: 0;
-      border-bottom: 100vmax solid $white;
+      border-bottom: 900px solid $white;
       border-right: 10vw solid transparent;
     }
     .image {
@@ -112,7 +113,7 @@
   .about {
     .content {
       width: 100%;
-    
+      
       .title {
         font-size: 32px;
         line-height: 56px;
@@ -129,18 +130,20 @@
   }
 }
 
-@media screen and (max-width: 456px) {
+@media screen and (max-width: 480px) {
   .about {
+    height: 700px;
     .content {
       padding-left: 20px;
 
       .title {
-        font-size: 24px;
-        line-height: 36px;
+        font-size: 8vw;
+        line-height: 20vw;
       }
 
       .copy {
-        line-height: 48px;
+        font-size: 3.5vw;
+        line-height: 10vw;
       }
     }
   }

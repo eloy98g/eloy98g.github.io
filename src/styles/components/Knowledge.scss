@@ -11,7 +11,7 @@
     color: $white;
     font-size: 40px;
     font-weight: bold;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
   }
 
   .subtitle {
@@ -23,20 +23,19 @@
   .content {
     width: 100%;
     display: flex;
-    flex-direction: row;
-    flex-flow: row wrap;
+    flex-wrap: wrap;
+    column-gap: 150px;
     justify-content: space-between;
     row-gap: 200px;
-    column-gap: 50px;
     padding-bottom: 100px;
   }
 
   .item {
+    width: 275px;
     opacity: 0;
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 400px;
 
     .container {
       width: 100px;
@@ -51,6 +50,109 @@
     .text {
       font-size: 32px;
       margin-left: 25px;
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .knowledge {
+    padding: 100px 50px;
+
+    .subtitle {
+      font-size: 18px;
+    }
+
+    .content {
+      column-gap: 75px;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .knowledge {
+    .content {
+      column-gap: 20px;
+      row-gap: 100px;
+    }
+
+    .item {
+      width: 180px;
+      .container {
+        width: 75px;
+        height: 75px;
+      }
+      .text {
+        font-size: 20px;
+        margin-left: 15px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .knowledge {
+    padding: 100px 20px;
+    .knw_title {
+      font-size: 32px;
+    }
+    .content{
+      row-gap: 75px;
+    }
+    .item {
+      width: 100px;
+      height: 150px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .container {
+        width: 100px;
+        height: 100px;
+      }
+
+      .text {
+        font-size: 14px;
+        margin-left: 0px;
+        margin-top: 10px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 270px) {
+  .knowledge {
+    .knw_title {
+      font-size: 24px;
+    }
+
+    .subtitle {
+      font-size: 14px;
+    }
+    .content{
+      column-gap: 10px;
+      row-gap: 50px;
+    }
+    .item {
+      width: 75px;
+      height: 120px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .container {
+        width: 75px;
+        height: 75px;
+      }
+
+      .text {
+        font-size: 14px;
+        margin-left: 0px;
+        margin-top: 10px;
+        text-align: center;
+      }
     }
   }
 }

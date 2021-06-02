@@ -10,7 +10,7 @@
     width: 100%;
     height: 100%;
     color: $white;
-    font-size: 2.5rem;
+    font-size: 4vw;
     text-align: left;
     display: flex;
     align-items: center;
@@ -45,7 +45,7 @@
 
   .intro-text {
     color: $white;
-    font-size: 2.5rem;
+    font-size: 4vw;
   }
 
   .hide {
@@ -62,10 +62,30 @@
     background: $black;
     border: 1px solid $white;
     color: white;
-    padding: 0.5em 1em;
-    border-radius: 2em;
-    font-size: 1.3em;
+    padding: 0.5vw 1vw;
+    border-radius: 2vw;
+    font-size: 1.3vw;
     cursor: pointer;
     font-weight: bold;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .hero{
+    padding: 0px 50px 0px 0px;
+
+    .intro{
+      padding-left: 50px;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero{
+    padding: 0px 20px;
+
+    .intro{
+      padding-left: 20px;
+    }
   }
 }
