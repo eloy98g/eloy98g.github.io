@@ -4,7 +4,7 @@
 .about {
   display: none;
   width: 100vw;
-  height: 100vh;
+  height: 900px;
   margin: 0;
   display: flex;
   justify-content: center;
@@ -12,10 +12,11 @@
   flex-direction: row;
   background-color: $white;
   color: $black;
-  padding: 100px 0px;
+  
 
   .content {
-    padding-left: 100px;
+    height: 100%;
+    padding: 100px 0px 100px 100px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -53,7 +54,7 @@
 
   .right-image {
     width: 40%;
-    height: 100vh;
+    height: 100%;
     position: relative;
 
     .shape {
@@ -62,19 +63,20 @@
       bottom: 0;
       width: 0;
       height: 0;
-      border-bottom: 100vh solid $white;
+      border-bottom: 100vmax solid $white;
       border-right: 10vw solid transparent;
+    }
+    .image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 
-  .image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+  
 
   //ANIMATIONS
   .top-slider {
