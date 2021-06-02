@@ -1,37 +1,40 @@
 @import '../Vars.scss';
 
-.contact{
+.contact {
   width: 100vw;
   margin: 0;
   background-color: $black;
   color: $white;
   padding: 100px 100px;
 
-  .title{
+  .title {
     color: $white;
     font-size: 40px;
     font-weight: bold;
     margin-bottom: 100px;
   }
 
-  .media_container{
-    width: 100%;
+  .content {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-
-    .media{
-      width: 300px;
-      height: 300px;
-      border-radius: 50%;
-      background-color: darken($black, 5%);
+    justify-content: space-evenly;
+    .media_container {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      img{
-        width: 100px;
-        height: 100px;
-        object-fit: contain;
+      flex-direction: column;
+      justify-content: space-between;
+      .media {
+        width: 175px;
+        height: 175px;
+        border-radius: 50%;
+        background-color: darken($black, 5%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: 100px;
+          height: 100px;
+          object-fit: contain;
+        }
       }
     }
   }
