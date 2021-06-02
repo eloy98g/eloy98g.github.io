@@ -23,8 +23,10 @@ const ProjectItem = ({ data }) => {
   return (
     <div
       className="project"
-      onMouseEnter={() => setEnter()}
-      onMouseLeave={() => setLeave()}
+      onMouseOver={() => setEnter()}
+      onMouseOut={() => setLeave()}
+      onFocus
+      onBlur
     >
       <div className="hide top" id={`top${id}`}>
         <p className="hide-title">{title}</p>
