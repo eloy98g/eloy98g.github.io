@@ -69,7 +69,7 @@ const About = () => {
               <span className="text">De aplicaciones&nbsp;</span>
               <UnderlinedText
                 controller="second"
-                text="movil y web"
+                text="móvil y web"
                 style={{ backgroundColor: 'rgba(237, 72, 72, 0.4)' }}
               />
             </h3>

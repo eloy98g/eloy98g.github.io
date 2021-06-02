@@ -57,14 +57,14 @@ const Knowledge = () => {
       <p className="subtitle">Lenguajes y librerías </p>
       <div className="content">
         <Item img={js} text="Javascript" />
-        <Item img={sass} text="Sass" />
         <Item img={cpp} text="C++" />
-        <Item img={gsaplogo} text="GSAP" />
         <Item img={flutter} text="Flutter" />
-        <Item img={htmlcss} text="Responsive design" />
         <Item img={react} text="React JS" />
         <Item img={react} text="React Native" />
         <Item img={redux} text="React Redux" />
+        <Item img={gsaplogo} text="GSAP" />
+        <Item img={sass} text="Sass" />
+        <Item img={htmlcss} text="Responsive design" />
       </div>
       <p className="subtitle">Herramientas y otros</p>
       <div className="content">

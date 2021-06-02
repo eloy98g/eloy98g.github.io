@@ -26,12 +26,12 @@ const ContactForm = () => {
         emailJsConfig.REACT_APP_USER_ID
       );
     } catch (e) {
-      console.log(e)
+      console.log(e);
     }
   };
 
   return (
-    <form className="contactform" ref={form}>
+    <form className="contactform" ref={form} autoComplete="off">
       <div className="container">
         <div className="form">
           <input
