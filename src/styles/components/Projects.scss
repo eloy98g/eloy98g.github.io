@@ -28,7 +28,7 @@
       display: flex;
       flex-direction: column;
       height: 600px;
-      background-color: #253341;
+      background-color: $accent;
       color: $white;
       border-radius: 20px;
       overflow: hidden;
@@ -39,12 +39,12 @@
         height: 50%;
         position: absolute;
         padding: 20px;
-        background-color: lighten(#253341, 10%);
-        .hide-title{
+        background-color: lighten($accent, 10%);
+        .hide-title {
           font-size: 36px;
           font-weight: bold;
         }
-        .hide-subtitle{
+        .hide-subtitle {
           font-size: 24px;
         }
 
@@ -55,7 +55,7 @@
           justify-content: space-evenly;
           transition: all 0.5s ease-out;
         }
-        
+
         &.top {
           align-items: center;
           justify-content: flex-end;
@@ -79,8 +79,14 @@
         justify-content: space-between;
 
         .header {
-          font-size: 36px;
-          font-weight: bold;
+          .title {
+            font-size: 36px;
+            font-weight: bold;
+          }
+
+          .subtitle {
+            font-size: 24px;
+          }
         }
 
         .details {
