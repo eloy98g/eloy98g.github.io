@@ -81,6 +81,15 @@
       cursor: pointer;
       color: $black;
       font-weight: bold;
+      background-color: lighten($accent, 10%);
+      position: relative;
+      .msg{
+        font-size: 72px;
+        opacity: 0;
+        position: absolute;
+      }
+    }
+    .submit:hover{
       background: lighten($accent, 30%);
     }
   }

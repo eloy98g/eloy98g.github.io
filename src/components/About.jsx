@@ -1,8 +1,15 @@
+// React
 import React, { useEffect } from 'react';
+
+// Animation
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import pp from '../assets/pp.png';
+
+// Components
 import UnderlinedText from '../widgets/UnderlinedText';
+
+// Assets & Style
+import pp from '../assets/pp.png';
 import '../styles/components/About.scss';
 
 gsap.registerPlugin(ScrollTrigger);

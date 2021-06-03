@@ -1,46 +1,80 @@
 /* eslint-disable no-console */
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React, { useRef } from 'react';
+// React
+import React, { useState } from 'react';
 
+// Animation
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+// Email
 import emailjs from 'emailjs-com';
 import emailJsConfig from '../../env';
 
+// Style
 import '../styles/widgets/ContactForm.scss';
 
+gsap.registerPlugin(ScrollTrigger);
+
 const ContactForm = () => {
-  const form = useRef(null);
+  const [name, setName] = useState();
+  const [email, setEmail] = useState();
+  const [message, setMessage] = useState();
 
   const handleSubmit = () => {
-    const formData = new FormData(form.current);  
+    if (name && email && message) {
+      gsap.to('.msg', {
+        opacity: 1,
+        duration: 1,
+      });
+      gsap.to('.msg', {
+        top: '-50px',
+        duration: 2,
+      });
+      gsap.to('.msg', {
+        opacity: 0,
+        duration: 1,
+        delay: 1,
+      });
+      gsap.to('.msg', {
+        top: '0',
+        duration: 0,
+      });
 
-    try {
-      const templateParams = {
-        name: formData.get('name'),
-        email: formData.get('email'),
-        message: formData.get('message'),
-      };
-      emailjs.send(
-        emailJsConfig.REACT_APP_SERVICE_ID,
-        emailJsConfig.REACT_APP_TEMPLATE_ID,
-        templateParams,
-        emailJsConfig.REACT_APP_USER_ID
-      );
-    } catch (e) {
-      console.log(e);
+      try {
+        const templateParams = {
+          name,
+          email,
+          message,
+        };
+        emailjs.send(
+          emailJsConfig.REACT_APP_SERVICE_ID,
+          emailJsConfig.REACT_APP_TEMPLATE_ID,
+          templateParams,
+          emailJsConfig.REACT_APP_USER_ID
+        );
+        setName('');
+        setEmail('');
+        setMessage('');
+      } catch (e) {
+        console.log(e);
+      }
     }
   };
 
   return (
-    <form className="contactform" ref={form} autoComplete="off">
+    <form className="contactform" autoComplete="off">
       <div className="container">
         <div className="form">
           <input
+            value={name}
             tabIndex="-1"
             className="text-input"
             type="text"
             autoComplete="off"
             name="name"
             required
+            onChange={(e) => setName(e.target.value)}
           />
           <label htmlFor="name" className="sub-section-title">
             <span className="content-title">Nombre</span>
@@ -48,12 +82,14 @@ const ContactForm = () => {
         </div>
         <div className="form">
           <input
+            value={email}
             tabIndex="-1"
             className="text-input"
             type="text"
             autoComplete="off"
             name="email"
             required
+            onChange={(e) => setEmail(e.target.value)}
           />
           <label htmlFor="email" className="sub-section-title">
             <span className="content-title">Email</span>
@@ -61,12 +97,14 @@ const ContactForm = () => {
         </div>
         <div className="form">
           <input
+            value={message}
             tabIndex="-1"
             className="text-input message"
             type="text"
             autoComplete="off"
             name="message"
             required
+            onChange={(e) => setMessage(e.target.value)}
           />
           <label htmlFor="message" className="sub-section-title">
             <span className="content-title">Mensaje</span>
@@ -74,6 +112,7 @@ const ContactForm = () => {
         </div>
         <button className="submit" type="button" onClick={handleSubmit}>
           Enviar
+          <p className="msg">&#x1f4e7;</p>
         </button>
       </div>
     </form>
