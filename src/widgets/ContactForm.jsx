@@ -11,7 +11,7 @@ const ContactForm = () => {
   const form = useRef(null);
 
   const handleSubmit = () => {
-    const formData = new FormData(form.current);
+    const formData = new FormData(form.current);  
 
     try {
       const templateParams = {
