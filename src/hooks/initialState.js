@@ -11,6 +11,11 @@ import redux from '../assets/logos/redux.png';
 import mobile1 from '../assets/projects/mcdo/1.png';
 import mobile2 from '../assets/projects/mcdo/2.png';
 import mobile3 from '../assets/projects/mcdo/3.png';
+import dash1 from '../assets/projects/mcdo/dash1.png';
+import labdash1 from '../assets/projects/labora/lab-dash1.png';
+import labapp1 from '../assets/projects/labora/lab-app1.png';
+import labapp2 from '../assets/projects/labora/lab-app2.png';
+import labapp3 from '../assets/projects/labora/lab-app3.png';
 import labora from '../assets/labora.png';
 import mcdologo from '../assets/mcdologo.png';
 import clapfy from '../assets/clapfy.png'
@@ -49,7 +54,7 @@ const initialState = {
         { icon: firebase, name: 'Firebase' },
         { icon: web, name: 'Web' }
       ],
-      images: [mobile1, mobile2, mobile3],
+      images: [dash1],
       headers: [clapfy, mcdologo]
     },
     {
@@ -64,7 +69,7 @@ const initialState = {
         { icon: android, name: 'Android' },
         { icon: ios, name: 'iOS' }
       ],
-      images: [mobile1, mobile2, mobile3],
+      images: [labapp1, labapp2, labapp3],
       headers: [labora]
     },
     {
@@ -78,7 +83,7 @@ const initialState = {
         { icon: redux, name: 'React Redux' },
         { icon: web, name: 'Web' }
       ],
-      images: [mobile1, mobile2, mobile3],
+      images: [labdash1],
       headers: [labora]
     }
   ],
