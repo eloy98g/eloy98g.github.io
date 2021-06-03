@@ -16,7 +16,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     // Filename nos pode un nombre al archivo compilado
     filename: 'bundle.js',
-    publicPath: '/'
+    publicPath: '/',
   },
   // Este elemento resulve las extensiones que vamos a utilizar
   resolve: {
@@ -53,12 +53,12 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|gif|jpg|ttf|mp4|jpeg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        test: /\.(png|gif|jpg|ttf|mp4|jpeg|ico)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
         use: [
           {
             loader: 'file-loader',
             options: { name: 'assets/[hash].[ext]' },
-          }
+          },
         ],
       },
     ],
@@ -73,6 +73,7 @@ module.exports = {
       // Donde esta ubicado el template que tenemos
       template: './public/index.html',
       filename: './index.html',
+      favicon: './src/assets/favicon.ico',
     }),
   ],
   cache: true,
