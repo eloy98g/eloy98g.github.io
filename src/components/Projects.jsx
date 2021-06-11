@@ -27,18 +27,16 @@ const Projects = () => {
       },
     });
   });
-  
+
   return (
     <div className="projects">
-      <p className="pr_title">Proyectos</p>
       <div className="content">
-        {
-          initialState.projects.map((e) => {
-            return(
-              <ProjectItem data={e} />
-            )
-          })
-        }
+        <p className="pr_title">Proyectos</p>
+        <div className="projects-container">
+          {initialState.projects.map((e) => {
+            return <ProjectItem data={e} />;
+          })}
+        </div>
       </div>
     </div>
   );

@@ -12,43 +12,47 @@
   flex-direction: row;
   background-color: $white;
   color: $black;
-  
-
+  padding-left: 100px;
   .content {
+    max-width: 1440px;
     height: 100%;
-    padding: 100px 0px 100px 100px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    width: 60%;
+    width: 100%;
 
-    .title {
-      opacity: 0;
-      font-size: 40px;
-      line-height: 78px;
-      width: 100%;
+    .left-content {
+      padding: 100px 0px;
       height: 100%;
-      margin-bottom: 50px;
-    }
-
-    .copy {
-      opacity: 0;
-      width: 100%;
-      height: 100%;
+      width: 60%;
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
-      align-items: flex-start;
-      line-height: 72px;
-      font-size: 28px;
+      justify-content: space-between;
+      align-items: left;
+      .title {
+        opacity: 0;
+        font-size: 40px;
+        line-height: 78px;
+        margin-bottom: 50px;
+      }
 
-      .line {
-        width: 100%;
-        position: relative;
+      .copy {
+        opacity: 0;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        line-height: 72px;
+        font-size: 28px;
+
+        .line {
+          width: 100%;
+          position: relative;
+          display: flex;
+          flex-direction: row;
+        }
       }
     }
   }
@@ -65,19 +69,23 @@
       width: 0;
       height: 0;
       border-bottom: 900px solid $white;
-      border-right: 10vw solid transparent;
+      border-right: 150px solid transparent;
     }
-    .image {
-      width: 100%;
+    .wrapper {
       height: 100%;
-      object-fit: cover;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      width: 50vw;
+      border: 1px solid red;
+      .image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow-y: visible;
+      }
     }
   }
-
-  
 
   //ANIMATIONS
   .top-slider {
@@ -94,16 +102,18 @@
 
 @media screen and (max-width: 1280px) {
   .about {
+    padding-left: 50px;
     .content {
-      padding-left: 50px;
-      .title {
-        font-size: 36px;
-        line-height: 78px;
-      }
+      .left-content {
+        .title {
+          font-size: 36px;
+          line-height: 78px;
+        }
 
-      .copy {
-        font-size: 24px;
-        line-height: 56px;
+        .copy {
+          font-size: 24px;
+          line-height: 56px;
+        }
       }
     }
   }
@@ -112,20 +122,21 @@
 @media screen and (max-width: 1024px) {
   .about {
     .content {
-      width: 100%;
-      
-      .title {
-        font-size: 32px;
-        line-height: 56px;
-      }
+      .left-content {
+        width: 100%;
+        .title {
+          font-size: 32px;
+          line-height: 56px;
+        }
 
-      .copy {
-        font-size: 3.5vw;
-        line-height: 56px;
+        .copy {
+          font-size: 3.5vw;
+          line-height: 56px;
+        }
       }
-    }
-    .right-image{
-      display: none;
+      .right-image {
+        display: none;
+      }
     }
   }
 }
@@ -133,17 +144,18 @@
 @media screen and (max-width: 480px) {
   .about {
     height: 700px;
+    padding-left: 20px;
     .content {
-      padding-left: 20px;
+      .left-content {
+        .title {
+          font-size: 8vw;
+          line-height: 20vw;
+        }
 
-      .title {
-        font-size: 8vw;
-        line-height: 20vw;
-      }
-
-      .copy {
-        font-size: 3.5vw;
-        line-height: 10vw;
+        .copy {
+          font-size: 3.5vw;
+          line-height: 10vw;
+        }
       }
     }
   }

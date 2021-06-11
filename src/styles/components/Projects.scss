@@ -3,178 +3,188 @@
 .projects {
   width: 100vw;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: $black;
   color: $white;
   padding: 100px 100px;
 
-  .pr_title {
-    opacity: 0;
-    color: $white;
-    font-size: 40px;
-    font-weight: bold;
-    margin-bottom: 100px;
-  }
-
   .content {
+    max-width: 1440px;
     display: flex;
-    flex-direction: row;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    gap: 20px;
+    flex-direction: column;
 
-    .project {
-      position: relative;
-      width: 500px;
-      display: flex;
-      flex-direction: column;
-      height: 600px;
-      background-color: $accent;
+    .pr_title {
+      opacity: 0;
       color: $white;
-      border-radius: 20px;
-      overflow: hidden;
+      font-size: 40px;
+      font-weight: bold;
+      margin-bottom: 100px;
+    }
 
-      .hide {
-        display: flex;
-        width: 100%;
-        height: 50%;
-        position: absolute;
-        padding: 20px;
-        background-color: lighten($accent, 10%);
-        text-align: center;
-        .hide-title {
-          font-size: 36px;
-          font-weight: bold;
-        }
-        .hide-subtitle {
-          font-size: 24px;
-        }
-
-        &.bottom {
-          align-items: flex-start;
-          border-radius: 0px 0px 17px 17px;
-          top: 50%;
-          justify-content: space-evenly;
-          transition: all 0.5s ease-out;
-        }
-
-        &.top {
-          align-items: center;
-          justify-content: flex-end;
-          flex-direction: column;
-          border-radius: 20px 20px 0px 0px;
-          top: 0;
-          transition: all 0.5s ease-out;
-        }
-
-        .hide-logo {
-          width: 100px;
-          height: 100px;
-        }
-      }
-      .description {
-        padding: 20px;
-        width: 100%;
-        height: 60%;
+    .projects-container {
+      display: flex;
+      flex-direction: row;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      gap: 20px;
+      .project {
+        position: relative;
+        width: 500px;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        height: 600px;
+        background-color: $accent;
+        color: $white;
+        border-radius: 20px;
+        overflow: hidden;
 
-        .header {
-          .title {
+        .hide {
+          display: flex;
+          width: 100%;
+          height: 50%;
+          position: absolute;
+          padding: 20px;
+          background-color: lighten($accent, 10%);
+          text-align: center;
+          .hide-title {
             font-size: 36px;
             font-weight: bold;
           }
-
-          .subtitle {
+          .hide-subtitle {
             font-size: 24px;
           }
-        }
 
-        .details {
-          .team {
-            margin-top: 30px;
-            display: flex;
-            flex-direction: row;
+          &.bottom {
+            align-items: flex-start;
+            border-radius: 0px 0px 17px 17px;
+            top: 50%;
+            justify-content: space-evenly;
+            transition: all 0.5s ease-out;
+          }
+
+          &.top {
             align-items: center;
-            .user {
-              img {
-                width: 27px;
-                height: 27px;
-                margin-left: 10px;
+            justify-content: flex-end;
+            flex-direction: column;
+            border-radius: 20px 20px 0px 0px;
+            top: 0;
+            transition: all 0.5s ease-out;
+          }
+
+          .hide-logo {
+            width: 100px;
+            height: 100px;
+          }
+        }
+        .description {
+          padding: 20px;
+          width: 100%;
+          height: 60%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          .header {
+            .title {
+              font-size: 36px;
+              font-weight: bold;
+            }
+
+            .subtitle {
+              font-size: 24px;
+            }
+          }
+
+          .details {
+            .team {
+              margin-top: 30px;
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              .user {
+                img {
+                  width: 27px;
+                  height: 27px;
+                  margin-left: 10px;
+                }
               }
             }
           }
-        }
-        .tech {
-          display: flex;
-          flex-direction: row;
-          .logo {
-            height: 35px;
-            width: 35px;
-            margin-right: 20px;
-            object-fit: contain;
+          .tech {
+            display: flex;
+            flex-direction: row;
+            .logo {
+              height: 35px;
+              width: 35px;
+              margin-right: 20px;
+              object-fit: contain;
+            }
           }
         }
-      }
 
-      .images {
-        width: 100%;
-        height: 40%;
-        display: flex;
-        flex-direction: row;
-        border-top: 4spx solid $white;
-        border-bottom-right-radius: 20px;
-        border-bottom-left-radius: 20px;
-        overflow: hidden;
-        img {
-          flex: 1;
-          object-fit: cover;
+        .images {
+          width: 100%;
+          height: 40%;
+          display: flex;
+          flex-direction: row;
+          border-top: 4spx solid $white;
+          border-bottom-right-radius: 20px;
+          border-bottom-left-radius: 20px;
+          overflow: hidden;
+          img {
+            flex: 1;
+            object-fit: cover;
+          }
         }
       }
     }
   }
 }
 
-
 @media screen and (max-width: 1280px) {
   .projects {
     padding: 100px 50px;
 
-    .content{
+    .content {
       gap: 20px;
-      
-      .project{
-        width: 290px;
-        height: 350px;
 
-        .description{
-          .header{
-            .title{
-              font-size: 28px;
-            }
-            .subtitle {
-              font-size: 18px;
-            }
-          }
+      .projects-container {
+        .project {
+          width: 290px;
+          height: 350px;
 
-          .details {
-            .desc{
-              font-size: 12px;
-            }
-            .team {
-              margin-top: 10px;
-
-              p{
-                font-size: 12px;
+          .description {
+            .header {
+              .title {
+                font-size: 28px;
+              }
+              .subtitle {
+                font-size: 18px;
               }
             }
-          }
 
-          .tech {
-            .logo {
-              height: 25px;
-              width: 25px;
-              margin-right: 10px;
+            .details {
+              .desc {
+                font-size: 12px;
+              }
+              .team {
+                margin-top: 10px;
+
+                p {
+                  font-size: 12px;
+                }
+              }
+            }
+
+            .tech {
+              .logo {
+                height: 25px;
+                width: 25px;
+                margin-right: 10px;
+              }
             }
           }
         }
@@ -185,10 +195,12 @@
 
 @media screen and (max-width: 1024px) {
   .projects {
-    .content{      
-      .project{
-        width: 350px;
-        height: 400px;
+    .content {
+      .projects-container {
+        .project {
+          width: 350px;
+          height: 400px;
+        }
       }
     }
   }
@@ -196,10 +208,12 @@
 
 @media screen and (max-width: 840px) {
   .projects {
-    .content{      
-      .project{
-        width: 300px;
-        height: 350px;
+    .content {
+      .projects-container {
+        .project {
+          width: 300px;
+          height: 350px;
+        }
       }
     }
   }
@@ -207,11 +221,13 @@
 
 @media screen and (max-width: 720px) {
   .projects {
-    .content{     
-      justify-content: center; 
-      .project{
-        width: 400px;
-        height: 500px;
+    .content {
+      .projects-container {
+        justify-content: center;
+        .project {
+          width: 400px;
+          height: 500px;
+        }
       }
     }
   }
@@ -219,44 +235,46 @@
 
 @media screen and (max-width: 480px) {
   .projects {
-    padding: 0px 20px 100px;
-    .pr_title {
-      font-size: 32px;
-    }
+    padding: 100px 20px;
+    .content {
+      justify-content: center;
+      width: 100%;
+      .pr_title {
+        font-size: 32px;
+      }
+      .projects-container {
+        .project {
+          width: 100vw;
+          height: 116vw;
 
-    .content{     
-      justify-content: center; 
-      .project{
-        width: 100vw;
-        height: 116vw;
-
-        .hide {
-          .hide-title {
-            font-size: 24px;
-            font-weight: bold;
-          }
-          .hide-subtitle {
-            font-size: 18px;
-          }
-
-          .hide-logo {
-            width: 75px;
-            height: 75px;
-          }
-        }
-        .description{
-          .header{
-            .title{
+          .hide {
+            .hide-title {
+              font-size: 24px;
+              font-weight: bold;
+            }
+            .hide-subtitle {
               font-size: 18px;
             }
-            .subtitle {
-              font-size: 12px;
+
+            .hide-logo {
+              width: 75px;
+              height: 75px;
             }
           }
+          .description {
+            .header {
+              .title {
+                font-size: 18px;
+              }
+              .subtitle {
+                font-size: 12px;
+              }
+            }
 
-          .details {
-            .team {
-              display: none;
+            .details {
+              .team {
+                display: none;
+              }
             }
           }
         }

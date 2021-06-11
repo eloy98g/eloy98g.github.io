@@ -1,121 +1,131 @@
 @import '../Vars.scss';
 
 .timeline {
-  display: none;
   width: 100vw;
   height: 800px;
   margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
   background-color: $black;
   color: $black;
-  padding-top: 100px;
+  padding: 100px 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: relative;
 
-  .tl_title {
-    opacity: 0;
-    position: absolute;
-    top: 100px;
-    left: 100px;
-    color: $white;
-    font-size: 40px;
-    font-weight: bold;
-  }
-
-  .line {
+  .content {
     width: 100%;
-    height: 5px;
-    position: absolute;
-    top: 60%;
-    left: -100%;
-    background-color: $white;
-  }
+    height: 100%;
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
 
-  .trigger {
-    width: 100%;
-    height: 1px;
-    position: absolute;
-    top: 60%;
-    background-color: transparent;
-
-    .ybar {
-      position: absolute;
-      top: 50%;
+    .tl_title {
+      opacity: 0;
       color: $white;
-      height: 0px;
-      width: 5px;
-      background-color: $white;
-      transform: rotatex(180deg);
-      transform-origin: top;
-
-      a:hover {
-        ~ .popup {
-          opacity: 1;
-        }
-      }
-    }
-
-    .img {
-      pointer-events: none;
-      opacity: 0;
-      position: relative;
-      top: 110%;
-      z-index: 0;
-      transform: rotatex(-180deg);
-      width: 100px;
-      height: 100px;
-    }
-
-    .text {
-      position: relative;
-      opacity: 0;
-      top: -90px;
-      left: 20px;
-      transform: rotatex(180deg);
-      width: 120px;
+      font-size: 40px;
       font-weight: bold;
+      margin-bottom: 100px;
     }
 
-    .uco {
-      left: 25%;
-
-      .img {
-        left: -32px;
-        width: 70px;
-        height: 100px;
-      }
-
-      .popup {
-        transform: rotatex(180deg);
-        left: 75px;
-      }
+    .line {
+      width: 100%;
+      height: 5px;
+      position: absolute;
+      top: 60%;
+      left: -100%;
+      background-color: $white;
     }
 
-    .clapfy {
-      left: 50%;
-      transform: rotatex(0deg);
-      transform-origin: bottom;
+    .tl-content {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      .trigger {
+        width: 100%;
+        height: 1px;
+        position: absolute;
+        top: calc(52% + 1px);
+        background-color: transparent;
 
-      .img {
-        transform: rotatex(0deg);
-        left: -50px;
-      }
+        .ybar {
+          position: absolute;
+          top: 50%;
+          color: $white;
+          height: 0px;
+          width: 5px;
+          background-color: $white;
+          transform: rotatex(180deg);
+          transform-origin: top;
 
-      .text {
-        transform: rotatex(0deg);
-      }
-    }
+          a:hover {
+            ~ .popup {
+              opacity: 1;
+            }
+          }
+        }
 
-    .labora {
-      left: 75%;
+        .img {
+          pointer-events: none;
+          opacity: 0;
+          position: relative;
+          top: 110%;
+          z-index: 0;
+          transform: rotatex(-180deg);
+          width: 100px;
+          height: 100px;
+        }
 
-      .img {
-        left: -50px;
-      }
-      .popup {
-        transform: rotatex(180deg);
+        .text {
+          position: relative;
+          opacity: 0;
+          top: -90px;
+          left: 20px;
+          transform: rotatex(180deg);
+          width: 120px;
+          font-weight: bold;
+        }
+
+        .uco {
+          left: 25%;
+
+          .img {
+            left: -32px;
+            width: 70px;
+            height: 100px;
+          }
+
+          .popup {
+            transform: rotatex(180deg);
+            left: 75px;
+          }
+        }
+
+        .clapfy {
+          left: 50%;
+          transform: rotatex(0deg);
+          transform-origin: bottom;
+
+          .img {
+            transform: rotatex(0deg);
+            left: -50px;
+          }
+
+          .text {
+            transform: rotatex(0deg);
+          }
+        }
+
+        .labora {
+          left: 75%;
+
+          .img {
+            left: -50px;
+          }
+          .popup {
+            transform: rotatex(180deg);
+          }
+        }
       }
     }
   }
@@ -123,9 +133,7 @@
 
 @media screen and (max-width: 1280px) {
   .timeline {
-    .tl_title {
-      left: 50px;
-    }
+    padding: 100px 50px;
   }
 }
 
@@ -137,56 +145,57 @@
 
 @media screen and (max-width: 480px) {
   .timeline {
-    .tl_title {
-      left: 20px;
-      font-size: 32px;
-    }
-    .line {
-      height: 3px;
-    }
-    .trigger {
-      .img {
-        width: 50px;
-        height: 50px;
-        left: 50px;
-      }
-      .ybar {
-        width: 3px;
-        .text {
-          font-size: 12px;
-          position: absolute;
-          width: 90px;
-          top: -20px;
-        }
+    padding: 100px 20px;
 
-        a.link{
-          width: 10px;
-        }
+    .content {
+      .tl_title {
+        font-size: 32px;
       }
-      .uco {
-        .img {
-          width: 35px;
-          height: 50px;
-          left: -16px;
-        }
-        .text {
-          left: -12px;
-        }
-      }
-      .clapfy {
-        .img {
-          left: -25px;
-        }
-        .text {
-          left: -42px;
-        }
-      }
-      .labora {
-        .img {
-          left: -25px;
-        }
-        .text {
-          left: -41px;
+      .tl-content {
+        .trigger {
+          .img {
+            width: 50px;
+            height: 50px;
+            left: 50px;
+          }
+          .ybar {
+            .text {
+              font-size: 12px;
+              position: absolute;
+              width: 90px;
+              top: -20px;
+            }
+
+            a.link {
+              width: 10px;
+            }
+          }
+          .uco {
+            .img {
+              width: 35px;
+              height: 50px;
+              left: -16px;
+            }
+            .text {
+              left: -12px;
+            }
+          }
+          .clapfy {
+            .img {
+              left: -25px;
+            }
+            .text {
+              left: -42px;
+            }
+          }
+          .labora {
+            .img {
+              left: -25px;
+            }
+            .text {
+              left: -41px;
+            }
+          }
         }
       }
     }

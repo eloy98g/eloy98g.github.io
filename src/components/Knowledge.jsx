@@ -38,7 +38,6 @@ const Item = ({ img, text }) => {
 };
 
 const Knowledge = () => {
-
   useEffect(() => {
     gsap.to('.knowledge .content .item', {
       opacity: 1,
@@ -53,27 +52,31 @@ const Knowledge = () => {
 
   return (
     <div className="knowledge">
-      <p className="knw_title">Conocimientos</p>
-      <p className="subtitle">Lenguajes y librerías </p>
       <div className="content">
-        <Item img={js} text="Javascript" />
-        <Item img={cpp} text="C++" />
-        <Item img={flutter} text="Flutter" />
-        <Item img={react} text="React JS" />
-        <Item img={react} text="React Native" />
-        <Item img={redux} text="React Redux" />
-        <Item img={gsaplogo} text="GSAP" />
-        <Item img={sass} text="Sass" />
-        <Item img={htmlcss} text="Responsive design" />
+        <p className="knw_title">Conocimientos</p>
+        <p className="subtitle">Lenguajes y librerías </p>
+        <div className="knowledge-container">
+          <Item img={js} text="Javascript" />
+          <Item img={cpp} text="C++" />
+          <Item img={flutter} text="Flutter" />
+          <Item img={react} text="React JS" />
+          <Item img={react} text="React Native" />
+          <Item img={redux} text="React Redux" />
+          <Item img={gsaplogo} text="GSAP" />
+          <Item img={sass} text="Sass" />
+          <Item img={htmlcss} text="Responsive design" />
+        </div>
       </div>
-      <p className="subtitle">Herramientas y otros</p>
       <div className="content">
-        <Item img={linux} text="Linux" />
-        <Item img={bash} text="Bash" />
-        <Item img={github} text="Github" />
-        <Item img={figma} text="Figma" />
-        <Item img={firebase} text="Firebase" />
-        <Item img={ingles} text="Inglés B2" />
+        <p className="subtitle">Herramientas y otros</p>
+        <div className="knowledge-container">
+          <Item img={linux} text="Linux" />
+          <Item img={bash} text="Bash" />
+          <Item img={github} text="Github" />
+          <Item img={figma} text="Figma" />
+          <Item img={firebase} text="Firebase" />
+          <Item img={ingles} text="Inglés B2" />
+        </div>
       </div>
     </div>
   );

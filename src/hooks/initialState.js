@@ -60,7 +60,21 @@ const initialState = {
     {
       id: 3,
       title: 'Labora',
-      subtitle: 'Workers app',
+      subtitle: 'Dashboard web',
+      desc: 'Panel de control web de gestión privada de las empresas',
+      team: [{ user: 'peralson', name: 'Pablo Peralta' }],
+      techs: [
+        { icon: react, name: 'React Native' },
+        { icon: redux, name: 'React Redux' },
+        { icon: web, name: 'Web' }
+      ],
+      images: [labdash1],
+      headers: [labora]
+    },
+    {
+      id: 4,
+      title: 'Labora',
+      subtitle: 'Mobile app',
       desc: 'App de búsqueda de trabajos temporales',
       team: [{ user: 'peralson', name: 'Pablo Peralta' }],
       techs: [
@@ -72,20 +86,6 @@ const initialState = {
       images: [labapp1, labapp2, labapp3],
       headers: [labora]
     },
-    {
-      id: 4,
-      title: 'Labora',
-      subtitle: 'Dashboard web',
-      desc: 'Panel de control web de gestión privada de las empresas',
-      team: [{ user: 'peralson', name: 'Pablo Peralta' }],
-      techs: [
-        { icon: react, name: 'React Native' },
-        { icon: redux, name: 'React Redux' },
-        { icon: web, name: 'Web' }
-      ],
-      images: [labdash1],
-      headers: [labora]
-    }
   ],
 };
 
