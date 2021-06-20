@@ -12,7 +12,7 @@
   flex-direction: row;
   background-color: $white;
   color: $black;
-  
+  padding: 0px 100px;
   .content {
     max-width: 1440px;
     height: 100%;
@@ -99,9 +99,20 @@
   }
 }
 
+// @media screen and (max-width: 1540px) {
+//   .about {
+//     padding-left: 100px;
+//   }
+// }
+
+// @media screen and (max-width: 1440px) {
+//   .about {
+//     padding-left: 0px;
+//   }
+// }
 @media screen and (max-width: 1280px) {
   .about {
-    padding-left: 50px;
+    padding: 0px 50px;
     .content {
       .left-content {
         .title {
@@ -143,7 +154,7 @@
 @media screen and (max-width: 480px) {
   .about {
     height: 700px;
-    padding-left: 20px;
+    padding: 0px 20px;
     .content {
       .left-content {
         .title {
