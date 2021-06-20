@@ -20,27 +20,34 @@ const ContactForm = () => {
   const [name, setName] = useState();
   const [email, setEmail] = useState();
   const [message, setMessage] = useState();
-  
+  const submitTl = gsap.timeline();
+
   const handleSubmit = () => {
     if (name && email && message) {
-      gsap.to('.msg', {
+      submitTl.to('.msg', {
         opacity: 1,
         duration: 1,
       });
-      gsap.to('.msg', {
-        top: '-50px',
-        duration: 2,
-      });
-      gsap.to('.msg', {
-        opacity: 0,
-        duration: 1,
-        delay: 1,
-      });
-      gsap.to('.msg', {
+      submitTl.to(
+        '.msg',
+        {
+          top: '-50px',
+          duration: 2,
+        },
+        '-=1'
+      );
+      submitTl.to(
+        '.msg',
+        {
+          opacity: 0,
+          duration: 1,
+        },
+        '-=1'
+      );
+      submitTl.to('.msg', {
         top: '0',
         duration: 0,
       });
-
       try {
         const templateParams = {
           name,
