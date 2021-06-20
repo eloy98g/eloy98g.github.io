@@ -16,30 +16,32 @@ const Hero = () => {
       delay: 0.5,
       display: 'block',
     });
-    tl.to('.intro', { y: '-100%', duration: 1 }, '-=1.5');
+    tl.to('.intro', { display: 'none', duration: 0 }, '2');
     tl.to('.land-content', { display: 'block' }, '-=1.5');
     tl.to('.scroll-down', { display: 'block', duration: '1' }, '-=1.5');
   });
 
   return (
     <section className="hero">
-      <div className="landing">
-        <div className="land-content">
-          <h1 className="name">Eloy Gómez</h1>
-          <h1 className="bullshit">Mobile & Web Developer</h1>
+      <div className="content">
+        <div className="landing">
+          <div className="land-content">
+            <h1 className="name">Eloy Gómez</h1>
+            <h1 className="bullshit">Mobile & Web Developer</h1>
+          </div>
         </div>
-      </div>
-      <div className="intro">
-        <div className="intro-text">
-          <h1 className="hide">
-            <span className="text">Si puede imaginarse,</span>
-          </h1>
-          <h1 className="hide">
-            <span className="text">Puede ser creado</span>
-          </h1>
+        <div className="intro">
+          <div className="intro-content">
+            <h1 className="hide">
+              <span className="text">Si puede imaginarse,</span>
+            </h1>
+            <h1 className="hide">
+              <span className="text">Puede ser creado</span>
+            </h1>
+          </div>
         </div>
+        <div className="slider" />
       </div>
-      <div className="slider" />
     </section>
   );
 };

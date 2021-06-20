@@ -4,88 +4,88 @@
   width: 100%;
   height: 100%;
   background-color: $black;
-  padding: 0px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  .landing {
+  .content {
+    max-width: 1440px;
     width: 100%;
     height: 100%;
-    color: $white;
-    font-size: 4vw;
-    text-align: left;
-    display: flex;
-    align-items: center;
-  }
+    position: relative;
 
-  .land-content {
-    display: none;
-  }
+    .landing {
+      width: 100%;
+      height: 100%;
+      color: $white;
+      font-size: 4em;
+      text-align: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-  .intro {
-    background: $black;
-    text-align: left;
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding-left: 100px;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-  }
+      .land-content {
+        display: none;
+      }
+    }
 
-  .slider {
-    background: $white;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform: translateY(100%);
-  }
+    .intro {
+      background: $black;
+      width: 100%;
+      height: 100%;
+      color: $white;
+      font-size: 1em;
+      text-align: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-  .intro-text {
-    color: $white;
-    font-size: 4vw;
-  }
+      .intro-content {
+        color: $white;
+        font-size: 4em;
+      }
+  
+      .hide {
+        background: $black;
+        overflow: hidden;
+      }
+  
+      .hide span {
+        transform: translateY(100%);
+        display: inline-block;
+      }
+    }
 
-  .hide {
-    background: $black;
-    overflow: hidden;
-  }
-
-  .hide span {
-    transform: translateY(100%);
-    display: inline-block;
-  }
-
-  .button {
-    background: $black;
-    border: 1px solid $white;
-    color: white;
-    padding: 0.5vw 1vw;
-    border-radius: 2vw;
-    font-size: 1.3vw;
-    cursor: pointer;
-    font-weight: bold;
-  }
-}
-
-@media screen and (max-width: 1280px) {
-  .hero{
-    padding: 0px 0px 0px 50px;
-
-    .intro{
-      padding-left: 50px;
+    .slider {
+      background: $white;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform: translateY(100%);
     }
   }
 }
 
-@media screen and (max-width: 480px) {
-  .hero{
-    padding: 0px 20px;
-
-    .intro{
-      padding-left: 20px;
+@media screen and (max-width: 1280px) {
+  .hero {
+    padding: 0px;
+    .content {
+      .landing {
+        font-size: 4vw;
+      }
+      .intro{
+        .intro-content {
+          font-size: 4vw;
+        }
+      }
     }
   }
 }

@@ -20,7 +20,7 @@ const ContactForm = () => {
   const [name, setName] = useState();
   const [email, setEmail] = useState();
   const [message, setMessage] = useState();
-
+  
   const handleSubmit = () => {
     if (name && email && message) {
       gsap.to('.msg', {
