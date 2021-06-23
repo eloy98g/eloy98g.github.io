@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 // Logos
 import github from '../assets/logos/github.png';
 
@@ -23,8 +23,8 @@ const ProjectItem = ({ data }) => {
   return (
     <div
       className="project"
-      onMouseOver={() => setEnter()}
-      onMouseOut={() => setLeave()}
+      onMouseEnter={() => setEnter()}
+      onMouseLeave={() => setLeave()}
       onFocus
       onBlur
     >
@@ -49,7 +49,7 @@ const ProjectItem = ({ data }) => {
           );
         })}
       </div>
-      <div className="description">
+      <Link to={`/project/${id}`} className="description">
         <div className="header">
           <p className="title">{title}</p>
           <p className="subtitle">{subtitle}</p>
@@ -76,7 +76,7 @@ const ProjectItem = ({ data }) => {
             return <img src={e.icon} alt="" className="logo" title={e.name} />;
           })}
         </div>
-      </div>
+      </Link>
       <div className="images">
         {images.map((e) => {
           return <img src={e} alt="" />;

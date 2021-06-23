@@ -8,37 +8,62 @@ import web from '../assets/logos/web.png';
 import redux from '../assets/logos/redux.png';
 
 // Assets
-import mobile1 from '../assets/projects/mcdo/1.png';
-import mobile2 from '../assets/projects/mcdo/2.png';
-import mobile3 from '../assets/projects/mcdo/3.png';
-import dash1 from '../assets/projects/mcdo/dash1.png';
-import labdash1 from '../assets/projects/labora/lab-dash1.png';
-import labapp1 from '../assets/projects/labora/lab-app1.png';
-import labapp2 from '../assets/projects/labora/lab-app2.png';
-import labapp3 from '../assets/projects/labora/lab-app3.png';
+import mcdoapp1 from '../assets/mocks/mcdo1.png';
+import mcdoapp2 from '../assets/mocks/mcdo2.png';
+import mcdoapp3 from '../assets/mocks/mcdo3.png';
+import mcdodash1 from '../assets/mocks/mcdodash1.png';
+import mcdodash2 from '../assets/mocks/mcdodash2.png';
+import mcdogeneral from '../assets/mocks/mcdogeneral.png';
+
+import laboraapp1 from '../assets/mocks/labora1.png';
+import laboraapp2 from '../assets/mocks/labora2.png';
+import laboradash1 from '../assets/mocks/laboradash1.png';
+import laboradash2 from '../assets/mocks/laboradash2.png';
+import laborageneral from '../assets/mocks/laborageneral.png';
+
+// Icons
 import labora from '../assets/labora.png';
 import mcdologo from '../assets/mcdologo.png';
-import clapfy from '../assets/clapfy.png'
+import clapfy from '../assets/clapfy.png';
 
 const initialState = {
   projects: [
     {
       id: 1,
       title: 'Ronald Mcdonald',
-      subtitle: 'Mobile App',
-      desc: 'App para las familias que hacen uso de los servicios de la Fundación',
+      subtitle: 'App',
+      desc:
+        'App para las familias que hacen uso de los servicios de la Fundación',
       team: [
         { user: 'jesusrp98', name: 'Jesús Rodríguez' },
-        { user: 'veves', name: 'Veves' }
+        { user: 'veves', name: 'Veves' },
       ],
       techs: [
         { icon: flutter, name: 'Flutter' },
         { icon: firebase, name: 'Firebase' },
         { icon: android, name: 'Android' },
-        { icon: ios, name: 'iOS' }
+        { icon: ios, name: 'iOS' },
       ],
-      images: [mobile1, mobile2, mobile3],
-      headers: [clapfy, mcdologo]
+      images: [mcdoapp1],
+      headers: [clapfy, mcdologo],
+      details: {
+        title: {
+          text: 'Proyecto Fundación Ronald Mcdonald',
+          subtext: 'Sistema de gestión de las familias que entren utilicen sus servicios',
+          image: mcdogeneral ,
+        },
+        middle: [
+          {
+            text: 'aaaa',
+            image: mcdoapp1 ,
+            meta: 'reverse',
+          },
+        ],
+        end: {
+          title: '',
+          image: {},
+        },
+      },
     },
     {
       id: 2,
@@ -47,15 +72,15 @@ const initialState = {
       desc: 'Panel de control web de gestión de la Fundación Ronald McDonald',
       team: [
         { user: 'jesusrp98', name: 'Jesús Rodríguez' },
-        { user: 'veves', name: 'Veves' }
+        { user: 'veves', name: 'Veves' },
       ],
       techs: [
         { icon: flutter, name: 'Flutter' },
         { icon: firebase, name: 'Firebase' },
-        { icon: web, name: 'Web' }
+        { icon: web, name: 'Web' },
       ],
-      images: [dash1],
-      headers: [clapfy, mcdologo]
+      images: [mcdodash1],
+      headers: [clapfy, mcdologo],
     },
     {
       id: 3,
@@ -66,25 +91,25 @@ const initialState = {
       techs: [
         { icon: react, name: 'React Native' },
         { icon: redux, name: 'React Redux' },
-        { icon: web, name: 'Web' }
+        { icon: web, name: 'Web' },
       ],
-      images: [labdash1],
-      headers: [labora]
+      images: [laboraapp1],
+      headers: [labora],
     },
     {
       id: 4,
       title: 'Labora',
-      subtitle: 'Mobile app',
+      subtitle: 'App',
       desc: 'App de búsqueda de trabajos temporales',
       team: [{ user: 'peralson', name: 'Pablo Peralta' }],
       techs: [
         { icon: react, name: 'React Native' },
         { icon: redux, name: 'React Redux' },
         { icon: android, name: 'Android' },
-        { icon: ios, name: 'iOS' }
+        { icon: ios, name: 'iOS' },
       ],
-      images: [labapp1, labapp2, labapp3],
-      headers: [labora]
+      images: [laboradash1],
+      headers: [labora],
     },
   ],
 };
