@@ -1,0 +1,189 @@
+@import '../Vars.scss';
+
+.projectlist {
+  width: 100vw;
+  margin: 0;
+  background-color: $black;
+  color: $white;
+  padding-top: 300px;
+  padding-bottom: 100px;
+
+  .title_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+    padding-left: 100px;
+    font-size: 40px;
+
+    .title {
+      max-width: 1440px;
+      width: 100%;
+      opacity: 0;
+      color: $white;
+      font-weight: bold;
+    }
+  }
+
+  .mainproject {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(90deg, #f7634d, #f6be2b);
+    width: 100%;
+    height: 125vh;
+    transform: skewY(-5deg);
+    padding: 0px 100px;
+
+    .content {
+      transform: skewY(5deg);
+      max-width: 1440px;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .text {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: left;
+
+        .text_container {
+          color: $black;
+
+          .title {
+            font-size: 42px;
+            font-weight: bold;
+            margin-bottom: 20px;
+          }
+
+          .subtitle {
+            font-size: 24px;
+            color: $grey;
+            margin-bottom: 20px;
+            font-weight: bold;
+          }
+
+          .link {
+            font-size: 14px;
+          }
+        }
+      }
+
+      .image {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 90%;
+          height: 90%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+
+  .labora {
+    background: linear-gradient(90deg, #61bc9e, #4b4797);
+
+    .content {
+      .text {
+        text-align: right;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .projects {
+    .title_container {
+      padding-left: 50px;
+      font-size: 36px;
+    }
+    .mainproject {
+      padding: 0px 50px;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .projects {
+    .mainproject {
+      height: 100vh;
+      .content {
+        .text {
+          .text_container {
+            .title {
+              font-size: 3.75vw;
+            }
+
+            .subtitle {
+              font-size: 2.5vw;
+            }
+
+            .link {
+              font-size: 2vw;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .projects {
+    .mainproject {
+      height: 50vh;
+      .content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+  
+        .text {
+          height: 50%;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+
+            .text_container {
+              .title {
+                font-size: 24px;
+              }
+  
+              .subtitle {
+                font-size: 20px;
+              }
+  
+              .link {
+                font-size: 14px;
+              }
+            }
+          
+        }
+  
+        .image {
+         display: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .projects {
+    .title_container {
+      padding-left: 20px;
+      font-size: 32px;
+    }
+    .mainproject {
+      padding: 0px 20px;
+    }
+  }
+}

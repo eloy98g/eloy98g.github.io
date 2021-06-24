@@ -8,8 +8,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 // Style
 import '../styles/components/Projects.scss';
 
-import mcdomain from '../assets/mocks/mcdomain.png';
-import laborageneral from '../assets/mocks/laborageneral.png';
+import labora from '../assets/laboramain.png';
+import mcdo from '../assets/mcdomain.png';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -27,36 +27,41 @@ const Projects = () => {
 
   return (
     <div className="projects">
-      <div className="title_container">
+      <div className="content">
         <p className="title">Mejores Proyectos</p>
-      </div>
-      <div className="mcdo mainproject">
-        <div className="content">
-          <div className="text">
-            <div className="text_container">
-              <p className="title">FUNDACIÓN INFANTIL RONALD MCDONALD</p>
-              <p className="subtitle">Frontend Developer</p>
-              <p className="link">Ver más</p>
+        <div className="projects_container">
+          <div className="mcdo mainproject">
+            <div className="content">
+              <div className="image">
+                <img src={mcdo} alt="McDonald" />
+              </div>
+              <div className="text">
+                <div className="text_container">
+                  <p className="title">FUNDACIÓN INFANTIL RONALD MCDONALD</p>
+                  <p className="subtitle">Frontend Developer</p>
+                  <p className="link">Ver más</p>
+                </div>
+              </div>
             </div>
           </div>
-          <div className="image">
-            <img src={mcdomain} alt="McDonald" />
-          </div>
-        </div>
-      </div>
-      <div className="labora mainproject">
-        <div className="content">
-          <div className="image">
-            <img src={laborageneral} alt="McDonald" />
-          </div>
-          <div className="text">
-            <div className="text_container">
-              <p className="title">LABORA</p>
-              <p className="subtitle">Frontend Developer & design assistant</p>
-              <p className="link">Ver más</p>
+          <div className="labora mainproject">
+            <div className="content">
+              <div className="text">
+                <div className="text_container">
+                  <p className="title">LABORA</p>
+                  <p className="subtitle">
+                    Frontend Developer & design assistant
+                  </p>
+                  <p className="link">Ver más</p>
+                </div>
+              </div>
+              <div className="image">
+                <img src={labora} alt="Labora" />
+              </div>
             </div>
           </div>
         </div>
+        <p className="viewall">Ver Todos</p>
       </div>
     </div>
   );
