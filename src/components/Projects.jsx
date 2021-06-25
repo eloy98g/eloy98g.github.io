@@ -1,5 +1,6 @@
 // React
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 // Animation
 import gsap from 'gsap';
@@ -61,7 +62,9 @@ const Projects = () => {
             </div>
           </div>
         </div>
-        <p className="viewall">Ver Todos</p>
+        {/* <Link to="/projects" className="viewall">
+          <p>Ver Todos</p>
+        </Link> */}
       </div>
     </div>
   );

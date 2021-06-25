@@ -1,6 +1,6 @@
 // React
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 // Style
 import '../styles/components/ProjectList.scss';
 
@@ -8,9 +8,11 @@ import mcdomain from '../assets/mocks/mcdomain.png';
 import laborageneral from '../assets/mocks/laborageneral.png';
 
 const ProjectList = () => {
-
   return (
-    <div className="projects">
+    <div className="projectlist">
+      <Link to="/" className="back">
+        <p>Volver</p>
+      </Link>
       <div className="mcdo mainproject">
         <div className="content">
           <div className="text">
