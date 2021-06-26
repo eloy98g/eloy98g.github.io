@@ -10,6 +10,7 @@ import UnderlinedText from '../widgets/UnderlinedText';
 
 // Assets & Style
 import pp from '../assets/pp.png';
+import profesional from '../assets/profesional.png';
 import '../styles/components/About.scss';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -62,6 +63,9 @@ const About = () => {
             <h1>Hola! &#x1F44B;</h1>
             <h1>Soy Eloy</h1>
           </div>
+          <div className="circular-image">
+            <img className="image" src={profesional} alt="" />
+          </div>
           <div className="copy">
             <div className="phrases">
               <h3 className="line">
@@ -83,6 +87,7 @@ const About = () => {
               </h3>
             </div>
           </div>
+          
         </div>
         <div className="right-image">
           <div className="shape" />
