@@ -22,7 +22,8 @@ const TimeLine = () => {
   useEffect(() => {
     gsap.to('.tl_title', {
       opacity: 1,
-      duration: 2,
+      duration: 3,
+      ease: 'Power0.out',
       scrollTrigger: {
         trigger: '.tl_title',
         start: 'top 100%',
