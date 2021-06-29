@@ -11,14 +11,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
+  overflow: hidden;
   .content {
     max-width: 1440px;
     width: 100%;
     display: flex;
     flex-direction: column;
 
-    .title {
+    .sectitle {
       opacity: 0;
       color: $white;
       font-weight: bold;
@@ -47,13 +47,18 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        overflow: hidden;
 
         &.mcdo {
           margin-bottom: 300px;
           .text {
             text-align: right;
             align-items: flex-end;
+          }
+
+          .image {
+            img {
+              transform: translateX(-150%);
+            }
           }
         }
 
@@ -77,7 +82,7 @@
               color: $white;
               .text_item {
                 color: $white;
-                // opacity: 0;
+                opacity: 0;
               }
             }
 
@@ -87,7 +92,7 @@
               margin-bottom: 20px;
               .text_item {
                 color: $grey;
-                // opacity: 0;
+                opacity: 0;
               }
             }
 
@@ -95,7 +100,7 @@
               font-size: 14px;
               color: $white;
               .text_item {
-                // opacity: 0;
+                opacity: 0;
               }
             }
           }
@@ -108,7 +113,7 @@
           justify-content: center;
           align-items: center;
           img {
-            // transform: translateY(200%);
+            transform: translateX(150%);
             // opacity: 0;
             height: 100%;
             width: 100%;
@@ -125,12 +130,21 @@
     padding: 150px 50px;
 
     .content {
-      .title {
+      .sectitle {
         margin-bottom: 100px;
       }
 
       .viewall {
         margin-top: 100px;
+      }
+      .projects_container {
+        .pr_content {
+          height: 600px;
+
+          &.mcdo {
+            margin-bottom: 50px;
+          }
+        }
       }
     }
   }
@@ -140,21 +154,19 @@
   .projects {
     .content {
       .projects_container {
-        .mainproject {
+        .pr_content {
+          height: 500px;
           &.mcdo {
-            margin-bottom: 0px;
+            margin-bottom: 50px;
           }
+          .text {
+            .project_text_container {
+              .prtitle {
+                font-size: 32px;
+              }
 
-          .pr_content {
-            .text {
-              .project_text_container {
-                .prtitle {
-                  font-size: 32px;
-                }
-
-                .subtitle {
-                  font-size: 18px;
-                }
+              .subtitle {
+                font-size: 18px;
               }
             }
           }
@@ -172,7 +184,7 @@
           height: 400px;
 
           &.mcdo {
-            margin-bottom: 100px;
+            margin-bottom: 0px;
           }
           .text {
             max-width: 300px;
@@ -258,7 +270,7 @@
 @media screen and (max-width: 320px) {
   .projects {
     .content {
-      .title {
+      .sectitle {
         font-size: 24px;
       }
       .projects_container {

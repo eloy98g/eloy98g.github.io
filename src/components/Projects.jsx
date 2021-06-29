@@ -18,92 +18,86 @@ const Projects = () => {
   // const textTl = gsap.timeline();
 
   useEffect(() => {
-    // const span = (text) => {
-    //   const node = document.createElement('span');
-    //   console.log('vars: ', text)
-    //   node.textContent = text;
-    //   node.classList.add('text_item');
-    //   return node;
-    // };
+    const span = (text) => {
+      const node = document.createElement('span');
+      node.textContent = text;
+      node.classList.add('text_item');
+      return node;
+    };
 
-    // const byLetter = (text, name) => [...text].map(span);
+    const byLetter = (text) => [...text].map(span);
 
-    // // const byWord = (text, name) => text.split(' ').map(span(text, name));
+    const targetList = document.querySelectorAll('[split-by]');
 
-    // const mcdoTargets = document
-    //   .querySelectorAll('[split-by]');
+    targetList.forEach((node) => {
+      const type = node.getAttribute('split-by');
+      let nodes = null;
 
-    // console.log(mcdoTargets)
-    // const laboraTargets = document
-    //   .querySelectorAll('[split-by]');
+      if (type === 'letter') {
+        nodes = byLetter(node.innerText);
+      }
 
-    // mcdoTargets.forEach((node) => {
-    //   const type = node.getAttribute('split-by');
-    //   let nodes = null;
-    //   if (type === 'letter') nodes = byLetter(node.innerText, node.classList[1]);
-    //   // else if (type === 'word') nodes = byWord(node.innerText, node.classList[1]);
+      if (nodes) node.firstChild.replaceWith(...nodes);
+    });
 
-    //   if (nodes) node.firstChild.replaceWith(...nodes);
-    // });
-
-    // laboraTargets.forEach((node) => {
-    //   const type = node.getAttribute('split-by');
-    //   let nodes = null;
-
-    //   if (type === 'letter') nodes = byLetter(node.innerText);
-    //   // else if (type === 'word') nodes = byWord(node.innerText);
-
-    //   if (nodes) node.firstChild.replaceWith(...nodes);
-    // });
-
-    gsap.to('.projects .content .title', {
+    gsap.to('.projects .content .sectitle', {
       opacity: 1,
-      duration: 3,
+      duration: 2,
       ease: 'Power0.out',
       scrollTrigger: {
-        trigger: '.projects .content .title',
+        trigger: '.projects .content .sectitle',
         start: 'top 90%',
       },
     });
 
-    // const items = document.getElementsByClassName('text_item');
+    gsap.to('.mcdoimg', {
+      duration: 3,
+      opacity: 1,
+      transform: 'translateY(0)',
+      ease: 'Elastic.easeOut(0.75, 0.5)',
+      scrollTrigger: {
+        trigger: '.mcdotext',
+        start: 'top 90%',
+      },
+    });
 
-    // gsap.to('.mcdoimg', {
-    //   duration: 2,
-    //   opacity: 1,
-    //   transform: 'translateX(0)',
-    //   ease: 'Power0.out',
-    //   scrollTrigger: {
-    //     trigger: '.mcdo.mainproject',
-    //     start: 'top 90%',
-    //     markers: true,
-    //   },
-    // });
+    gsap.to('.laboraimg', {
+      duration: 3,
+      opacity: 1,
+      transform: 'translateX(0)',
+      ease: 'Elastic.easeOut(0.75, 0.5)',
+      scrollTrigger: {
+        trigger: '.laboratext',
+        start: 'top 90%',
+      },
+    });
 
-    // gsap.to('.laboraimg', {
-    //   duration: 2,
-    //   opacity: 1,
-    //   transform: 'translateX(0)',
-    //   ease: 'Power0.out',
-    //   scrollTrigger: {
-    //     trigger: '.labora.mainproject',
-    //     start: 'top 90%',
-    //     markers: true,
-    //   },
-    // });
+    gsap.to('.mcdotext .text_item', {
+      opacity: 1,
+      stagger: 0.02,
+      ease: 'Sine.easeout',
+      scrollTrigger: {
+        trigger: '.mcdotext',
+        start: 'top 90%',
+      },
+    });
 
-    // textTl.to(items, {
-    //   opacity: 1,
-    //   stagger: 0.02,
-    //   transform: 'translateY(100%)',
-    //   ease: 'Power0.out',
-    // });
+    gsap.to('.laboratext .text_item', {
+      opacity: 1,
+      transform: 'translateX(0)',
+      stagger: 0.02,
+      ease: 'Sine.easeout',
+      scrollTrigger: {
+        trigger: '.laboratext',
+        start: 'top 90%',
+      },
+    });
   });
 
   return (
     <div className="projects">
       <div className="content">
-        <p className="title">Mejores Proyectos</p>
+        <p className="sectitle">Mejores Proyectos</p>
         <div className="projects_container">
           <div className="pr_content mcdo">
             <div className="image">
@@ -111,13 +105,13 @@ const Projects = () => {
             </div>
             <div className="text">
               <div className="project_text_container mcdotext">
-                <p split-by="letter" className="prtitle mcdotext">
+                <p split-by="letter" className="prtitle">
                   FUNDACIÓN INFANTIL RONALD MCDONALD
                 </p>
-                <p split-by="letter" className="subtitle mcdotext">
+                <p split-by="letter" className="subtitle">
                   Frontend Developer
                 </p>
-                <p split-by="letter" className="link mcdotext">
+                <p split-by="letter" className="link">
                   Ver más
                 </p>
               </div>
@@ -125,14 +119,14 @@ const Projects = () => {
           </div>
           <div className="pr_content labora">
             <div className="text">
-              <div className="project_text_container">
-                <p split-by="letter" className="prtitle laboratext">
+              <div className="project_text_container laboratext">
+                <p split-by="letter" className="prtitle">
                   LABORA
                 </p>
-                <p split-by="letter" className="subtitle laboratext">
+                <p split-by="letter" className="subtitle">
                   Frontend Developer & design assistant
                 </p>
-                <p split-by="letter" className="link laboratext">
+                <p split-by="letter" className="link">
                   Ver más
                 </p>
               </div>
