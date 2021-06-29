@@ -57,7 +57,7 @@
 
           .image {
             img {
-              transform: translateX(-150%);
+              transform: translateY(150%);
             }
           }
         }
@@ -71,7 +71,6 @@
           flex-direction: column;
           text-align: left;
           max-width: 500px;
-
           .project_text_container {
             color: $black;
             .prtitle {
@@ -113,7 +112,7 @@
           justify-content: center;
           align-items: center;
           img {
-            transform: translateX(150%);
+            transform: translateY(150%);
             // opacity: 0;
             height: 100%;
             width: 100%;
@@ -231,6 +230,12 @@
               height: 50%;
               max-width: 300px;
               text-align: center;
+              
+            }
+            .image{
+              img{
+                transform: translateY(0);
+              }
             }
           }
 
@@ -238,6 +243,8 @@
             height: 50%;
             max-width: 300px;
             text-align: center;
+            justify-content: center;
+              align-items: center;
           }
 
           .image {
@@ -248,6 +255,7 @@
               height: 100%;
               width: 100%;
               object-fit: contain;
+              transform: translateY(0);
             }
           }
         }

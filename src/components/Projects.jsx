@@ -51,10 +51,10 @@ const Projects = () => {
     });
 
     gsap.to('.mcdoimg', {
-      duration: 3,
+      duration: 1.5,
       opacity: 1,
       transform: 'translateY(0)',
-      ease: 'Elastic.easeOut(0.75, 0.5)',
+      ease: 'Sine.easeout',
       scrollTrigger: {
         trigger: '.mcdotext',
         start: 'top 90%',
@@ -62,10 +62,10 @@ const Projects = () => {
     });
 
     gsap.to('.laboraimg', {
-      duration: 3,
+      duration: 1.5,
       opacity: 1,
-      transform: 'translateX(0)',
-      ease: 'Elastic.easeOut(0.75, 0.5)',
+      transform: 'translateY(0)',
+      ease: 'Sine.easeout',
       scrollTrigger: {
         trigger: '.laboratext',
         start: 'top 90%',
