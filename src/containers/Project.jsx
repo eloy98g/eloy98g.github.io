@@ -54,7 +54,7 @@ const Project = ({ match }) => {
       </div>
       <div className="myinfo">
         <div className="content">
-          <div className="myinfo">
+          <div className="info_content">
             <p className="title">MI ROL</p>
             {project.roles.map((e) => {
               return(
@@ -63,7 +63,7 @@ const Project = ({ match }) => {
             })}
             <div className="team">
               <p className="title">EQUIPO</p>
-              <div className="content">
+              <div className="team_content">
                 {project.team.map((e) => {
                   return (
                     <a href={e} className="user" target="blank">

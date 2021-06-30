@@ -21,12 +21,12 @@ const initialState = {
   projects: [
     {
       id: 'vbG6rLT4UKhS4z3u',
-      style: 'linear-gradient(90deg, #f7634d, #f6be2b)',
+      style: 'linear-gradient(#f7634d, #f6be2b)',
       link: 'https://fundacionronald.org/',
       title: 'FUNDACIÓN INFANTIL RONALD MCDONALD',
       copy: 'Ayudando a familias por toda España',
-      resume: `La Fundación Infantil Ronald McDonald tiene como misión crear, buscar y apoyar programas que mejoren de forma directa la salud y el bienestar de los/las niños/as. A través de las Casas y Salas Familiares Ronald McDonald ayudamos a las familias que tienen hijos/as con graves problemas de salud y que se encuentran hospitalizados en España.`,
-      subresume: `El proyecto consta de una aplicación móvil usada por las familias que acceden a los servicios de la Fundación y un panel de control web utilizado por los administradores de la Fundación para gestionar todo lo relacionado con las Casas y Salas Familiares`,
+      resume: `La Fundación tiene como misión crear, buscar y apoyar programas que mejoren de forma directa la salud y el bienestar de los/las niños/as.`,
+      subresume: `El proyecto consta de una app para las familias que acceden a los servicios de la Fundación y un panel de control web de gestión utilizado por los administradores.`,
       roles: ['Desarrollador Frontend'],
       first: mcdoapp,
       second: mcdogeneral,
@@ -38,10 +38,10 @@ const initialState = {
     },
     {
       id: '4KG5SWu7cCnfnupH',
-      style: 'linear-gradient(90deg, #61bc9e, #4b4797)',
+      style: 'linear-gradient( #4b4797,#61bc9e)',
       link: 'https://www.labora.app/',
       title: 'LABORA',
-      copy: 'Contrata a tu personal en un click',
+      copy: 'Contrata tu personal en un click',
       resume: `Labora es una empresa dedicada a facilitar las contrataciones temporales al mñaximo, unifica todas las fuentes de personal, gestión legal, control de horas, pagos, seguridad social...`,
       roles: ['Desarrollador Frontend', 'Asistente de diseño'],
       first: laboraapp,
