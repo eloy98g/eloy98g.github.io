@@ -9,8 +9,12 @@ const Hero = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    if (!hasPlayed) {
-      
+    console.log('a', hasPlayed);
+    if (hasPlayed) {
+      tl.set('.intro', { display: 'none' });
+      tl.set('.land-content', { display: 'block' });
+      tl.set('.scroll-down', { display: 'block', duration: '1' });
+    } else {
       tl.set('body', { overflow: 'hidden' });
       tl.to('.text', { y: '0%', duration: 1 });
       tl.to('body', { overflow: 'visible', duration: '0' });
@@ -24,10 +28,6 @@ const Hero = () => {
       tl.to('.land-content', { display: 'block' }, '-=1.5');
       tl.to('.scroll-down', { display: 'block', duration: '1' }, '-=1.5');
       hasPlayed = true;
-    }else{
-      tl.set('.intro', { display: 'none'});
-      tl.set('.land-content', { display: 'block' });
-      tl.set('.scroll-down', { display: 'block', duration: '1' });
     }
   });
 
