@@ -34,7 +34,7 @@ const initialState = {
       tech: [flutter, firebase, android, ios, web],
       mediaImg: mcdobg,
       android: 'https://play.google.com/store/apps/details?id=com.clapfy.phobos&hl=es_419&gl=US',
-      ios: '',
+      ios: 'https://apps.apple.com/bj/app/fundaci%C3%B3n-ronald-mcdonald/id1554478727',
     },
     {
       id: '4KG5SWu7cCnfnupH',

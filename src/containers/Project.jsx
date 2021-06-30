@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import gsap from 'gsap';
 
 // initialState
 import initialState from '../hooks/initialState';
@@ -10,6 +11,9 @@ import github from '../assets/logos/github_black.png';
 import android from '../assets/logos/android.png';
 import ios from '../assets/logos/ios.png';
 
+// Widget
+import ScrollDown from '../widgets/ScrollDown';
+
 const Project = ({ match }) => {
   const { id } = match.params;
 
@@ -18,6 +22,7 @@ const Project = ({ match }) => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    gsap.set('.scroll-down', { display: 'block', duration: '1' });
   });
   return (
     <div className="oneproject">
@@ -93,6 +98,7 @@ const Project = ({ match }) => {
           </div>
         </div>
       </div>
+      <ScrollDown />
     </div>
   );
 };
