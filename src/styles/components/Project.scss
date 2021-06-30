@@ -10,51 +10,225 @@
   background-color: $black;
   color: $white;
   padding: 0px 100px;
+  position: relative;
 
-  .content {
-    max-width: 1440px;
-    display: flex;
-    flex-direction: column;
-
-    
-  }
-}
-
-.frame {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  height: 100vh;
-  .copy {
-    width: 50%;
-    height: 100%;
+  .header {
+    width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: left;
-    font-size: 40px;
+
+    .project_title {
+      max-width: 800px;
+      width: 100%;
+      text-align: center;
+      font-size: 72px;
+      font-weight: bold;
+    }
   }
 
-  .image {
-    width: 50%;
+  .info {
+    background-color: $white;
+    height: 100vh;
+    width: 100vw;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    justify-content: center;
+    color: $black;
+    .content {
+      max-width: 1440px;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      height: 100%;
 
-    img {
-      object-fit: contain;
-      width: 90%;
-      height: 90%;
+      .text {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        .copy {
+          font-size: 36px;
+          font-weight: bold;
+          margin-bottom: 50px;
+        }
+
+        .resume {
+          font-size: 18px;
+          text-align: justify;
+          margin-bottom: 20px;
+        }
+
+        .link{
+          text-decoration: none;
+          font-size: 14px;
+          color: $black;
+        }
+      }
+
+      .info_image {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        img {
+          width: 70%;
+          height: 70%;
+          object-fit: contain;
+        }
+      }
     }
   }
 
-  &.reverse {
-    flex-direction: row-reverse;
-    .copy {
-      text-align: right;
+  .title {
+    font-size: 16px;
+    color: $black;
+    font-weight: bolder;
+  }
+
+  .myinfo {
+    width: 100vw;
+    height: 100vh;
+    background-color: $blue;
+    color: $black;
+    display: flex;
+    justify-content: center;
+    background-color: $white;
+
+    .content {
+      max-width: 1440px;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      
+      .info_image {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+
+      .myinfo {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        text-align: left;
+
+        .work {
+          font-size: 36px;
+          
+        }
+
+        .team {
+          display: flex;
+          flex-direction: column;
+          margin-top: 50px;
+          .content {
+            margin-top: 20px;
+            margin-bottom: 50px;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+
+            img {
+              width: 75px;
+              height: 75px;
+              object-fit: contain;
+              margin-right: 20px;
+            }
+          }
+        }
+      }
+      .tech {
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+        img {
+          width: 75px;
+          height: 75px;
+          object-fit: contain;
+          margin-right: 20px;
+        }
+      }
     }
-    .image {
-      justify-content: flex-start;
+  }
+
+  .media {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    .media_img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .getit {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 1) 5%,
+        rgba(0, 0, 0, 0.8) 40%,
+        rgba(0, 0, 0, 0.5) 70%,
+        rgba(0, 0, 0, 0.1) 100%
+      );
+      .content {
+        padding-bottom: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .media_title {
+          color: $white;
+          font-weight: bold;
+          font-size: 36px;
+          margin-bottom: 50px;
+        }
+
+        .images {
+          width: 100%;
+          display: flex;
+          justify-content: space-around;
+          img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+          }
+        }
+
+        .back {
+          color: $white;
+          font-weight: bold;
+          font-size: 24px;
+          text-decoration: none;
+          margin-top: 100px;
+        }
+      }
     }
   }
 }

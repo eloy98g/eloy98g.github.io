@@ -1,6 +1,7 @@
 // React
-import React from 'react';
+import React, {useEffect} from 'react';
 import { Link } from 'react-router-dom';
+
 // Style
 import '../styles/components/ProjectList.scss';
 
@@ -8,6 +9,11 @@ import mcdomain from '../assets/mocks/mcdomain.png';
 import laborageneral from '../assets/mocks/laborageneral.png';
 
 const ProjectList = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  })
+  
   return (
     <div className="projectlist">
       <Link to="/" className="back">

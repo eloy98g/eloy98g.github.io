@@ -8,108 +8,49 @@ import web from '../assets/logos/web.png';
 import redux from '../assets/logos/redux.png';
 
 // Assets
-import mcdoapp1 from '../assets/mocks/mcdo1.png';
-import mcdoapp2 from '../assets/mocks/mcdo2.png';
-import mcdoapp3 from '../assets/mocks/mcdo3.png';
-import mcdodash1 from '../assets/mocks/mcdodash1.png';
-import mcdodash2 from '../assets/mocks/mcdodash2.png';
-import mcdogeneral from '../assets/mocks/mcdogeneral.png';
+import mcdoapp from '../assets/mocks/mcdo4.png';
+import mcdogeneral from '../assets/mocks/mcdogeneral2.png';
+import mcdobg from '../assets/mocks/mcdobg.jpg';
 
-import laboraapp1 from '../assets/mocks/labora1.png';
-import laboraapp2 from '../assets/mocks/labora2.png';
-import laboradash1 from '../assets/mocks/laboradash1.png';
-import laboradash2 from '../assets/mocks/laboradash2.png';
-import laborageneral from '../assets/mocks/laborageneral.png';
+import laboraapp from '../assets/mocks/laboraapp1.png';
+import laborageneral2 from '../assets/mocks/laborageneral2.png';
+import laborabg from '../assets/mocks/laborabg.jpg';
 
-// Icons
-import labora from '../assets/labora.png';
-import mcdologo from '../assets/mcdologo.png';
-import clapfy from '../assets/clapfy.png';
 
 const initialState = {
   projects: [
     {
-      id: 1,
-      title: 'Ronald Mcdonald',
-      subtitle: 'App',
-      desc:
-        'App para las familias que hacen uso de los servicios de la Fundación',
-      team: [
-        { user: 'jesusrp98', name: 'Jesús Rodríguez' },
-        { user: 'veves', name: 'Veves' },
-      ],
-      techs: [
-        { icon: flutter, name: 'Flutter' },
-        { icon: firebase, name: 'Firebase' },
-        { icon: android, name: 'Android' },
-        { icon: ios, name: 'iOS' },
-      ],
-      images: [mcdoapp1],
-      headers: [clapfy, mcdologo],
-      details: {
-        title: {
-          text: 'Proyecto Fundación Ronald Mcdonald',
-          subtext: 'Sistema de gestión de las familias que entren utilicen sus servicios',
-          image: mcdogeneral ,
-        },
-        middle: [
-          {
-            text: 'aaaa',
-            image: mcdoapp1 ,
-            meta: 'reverse',
-          },
-        ],
-        end: {
-          title: '',
-          image: {},
-        },
-      },
+      id: 'vbG6rLT4UKhS4z3u',
+      style: 'linear-gradient(90deg, #f7634d, #f6be2b)',
+      link: 'https://fundacionronald.org/',
+      title: 'FUNDACIÓN INFANTIL RONALD MCDONALD',
+      copy: 'Ayudando a familias por toda España',
+      resume: `La Fundación Infantil Ronald McDonald tiene como misión crear, buscar y apoyar programas que mejoren de forma directa la salud y el bienestar de los/las niños/as. A través de las Casas y Salas Familiares Ronald McDonald ayudamos a las familias que tienen hijos/as con graves problemas de salud y que se encuentran hospitalizados en España.`,
+      subresume: `El proyecto consta de una aplicación móvil usada por las familias que acceden a los servicios de la Fundación y un panel de control web utilizado por los administradores de la Fundación para gestionar todo lo relacionado con las Casas y Salas Familiares`,
+      roles: ['Desarrollador Frontend'],
+      first: mcdoapp,
+      second: mcdogeneral,
+      team: ['https://github.com/jesusrp98', 'https://github.com/veves'],
+      tech: [flutter, firebase, android, ios, web],
+      mediaImg: mcdobg,
+      android: 'https://play.google.com/store/apps/details?id=com.clapfy.phobos&hl=es_419&gl=US',
+      ios: '',
     },
     {
-      id: 2,
-      title: 'Ronald Mcdonald',
-      subtitle: 'Dashboard web',
-      desc: 'Panel de control web de gestión de la Fundación Ronald McDonald',
-      team: [
-        { user: 'jesusrp98', name: 'Jesús Rodríguez' },
-        { user: 'veves', name: 'Veves' },
-      ],
-      techs: [
-        { icon: flutter, name: 'Flutter' },
-        { icon: firebase, name: 'Firebase' },
-        { icon: web, name: 'Web' },
-      ],
-      images: [mcdodash1],
-      headers: [clapfy, mcdologo],
-    },
-    {
-      id: 3,
-      title: 'Labora',
-      subtitle: 'Dashboard web',
-      desc: 'Panel de control web de gestión privada de las empresas',
-      team: [{ user: 'peralson', name: 'Pablo Peralta' }],
-      techs: [
-        { icon: react, name: 'React Native' },
-        { icon: redux, name: 'React Redux' },
-        { icon: web, name: 'Web' },
-      ],
-      images: [laboraapp1],
-      headers: [labora],
-    },
-    {
-      id: 4,
-      title: 'Labora',
-      subtitle: 'App',
-      desc: 'App de búsqueda de trabajos temporales',
-      team: [{ user: 'peralson', name: 'Pablo Peralta' }],
-      techs: [
-        { icon: react, name: 'React Native' },
-        { icon: redux, name: 'React Redux' },
-        { icon: android, name: 'Android' },
-        { icon: ios, name: 'iOS' },
-      ],
-      images: [laboradash1],
-      headers: [labora],
+      id: '4KG5SWu7cCnfnupH',
+      style: 'linear-gradient(90deg, #61bc9e, #4b4797)',
+      link: 'https://www.labora.app/',
+      title: 'LABORA',
+      copy: 'Contrata a tu personal en un click',
+      resume: `Labora es una empresa dedicada a facilitar las contrataciones temporales al mñaximo, unifica todas las fuentes de personal, gestión legal, control de horas, pagos, seguridad social...`,
+      roles: ['Desarrollador Frontend', 'Asistente de diseño'],
+      first: laboraapp,
+      second: laborageneral2,
+      team: ['https://github.com/peralson'],
+      tech: [react, redux, android, ios, web],
+      mediaImg: laborabg,
+      android: 'https://www.labora.app/',
+      ios: 'https://www.labora.app/',
     },
   ],
 };

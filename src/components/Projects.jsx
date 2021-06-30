@@ -1,6 +1,6 @@
 // React
 import React, { useEffect } from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 // Animation
 import gsap from 'gsap';
@@ -111,9 +111,9 @@ const Projects = () => {
                 <p split-by="letter" className="subtitle">
                   Frontend Developer
                 </p>
-                <p split-by="letter" className="link">
+                <Link to='./project/vbG6rLT4UKhS4z3u' split-by="letter" className="link">
                   Ver más
-                </p>
+                </Link>
               </div>
             </div>
           </div>
@@ -126,9 +126,9 @@ const Projects = () => {
                 <p split-by="letter" className="subtitle">
                   Frontend Developer & design assistant
                 </p>
-                <p split-by="letter" className="link">
+                <Link to='./project/4KG5SWu7cCnfnupH' split-by="letter" className="link">
                   Ver más
-                </p>
+                </Link>
               </div>
             </div>
             <div className="image">
