@@ -9,11 +9,11 @@ const Hero = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    console.log('a', hasPlayed);
     if (hasPlayed) {
-      tl.set('.intro', { display: 'none' });
-      tl.set('.land-content', { display: 'block' });
-      tl.set('.scroll-down', { display: 'block', duration: '1' });
+      document.getElementById('intro').style.display = 'none';
+      document.getElementById('content').style.display = 'block';
+      document.getElementById('scroll').style.display = 'block';
+
     } else {
       tl.set('body', { overflow: 'hidden' });
       tl.to('.text', { y: '0%', duration: 1 });
@@ -35,12 +35,12 @@ const Hero = () => {
     <section className="hero">
       <div className="content">
         <div className="landing">
-          <div className="land-content">
+          <div className="land-content" id='content'>
             <h1 className="name">Eloy Gómez</h1>
             <h1 className="bullshit">Mobile & Web Developer</h1>
           </div>
         </div>
-        <div className="intro">
+        <div className="intro" id='intro'>
           <div className="intro-content">
             <h1 className="hide">
               <span className="text">Si puede imaginarse,</span>
