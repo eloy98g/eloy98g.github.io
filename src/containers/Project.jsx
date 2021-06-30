@@ -23,6 +23,14 @@ const Project = ({ match }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
     gsap.set('.scroll-down', { display: 'block', duration: '1' });
+
+    gsap.to('.scroll-down', {
+      display: 'none',
+      scrollTrigger: {
+        trigger: '.back',
+        start: 'top 100%',
+      },
+    });
   });
   return (
     <div className="oneproject">
