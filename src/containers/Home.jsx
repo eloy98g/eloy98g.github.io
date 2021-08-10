@@ -19,10 +19,10 @@ import '../styles/containers/Home.scss';
 const Home = () => {
   return (
     <div className="home">
-      {/* <Hero />
+      <Hero />
       <About />
       <TimeLine />
-      <Projects /> */}
+      <Projects />
       <Knowledge />
       <Contact />
       <ScrollDown />
