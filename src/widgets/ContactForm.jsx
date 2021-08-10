@@ -2,52 +2,19 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 // React
 import React, { useState } from 'react';
-
-// Animation
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-// Email
 import emailjs from 'emailjs-com';
 import emailJsConfig from '../../env';
-
-// Style
 import '../styles/widgets/ContactForm.scss';
-
-gsap.registerPlugin(ScrollTrigger);
+import contactFormAnimation from '../animations/ContactFormAnimation';
 
 const ContactForm = () => {
-  const [name, setName] = useState();
-  const [email, setEmail] = useState();
-  const [message, setMessage] = useState();
-  const submitTl = gsap.timeline();
-
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  
   const handleSubmit = () => {
     if (name && email && message) {
-      submitTl.to('.msg', {
-        opacity: 1,
-        duration: 1,
-      });
-      submitTl.to(
-        '.msg',
-        {
-          top: '-50px',
-          duration: 2,
-        },
-        '-=1'
-      );
-      submitTl.to(
-        '.msg',
-        {
-          opacity: 0,
-          duration: 1,
-        },
-        '-=1'
-      );
-      submitTl.to('.msg', {
-        top: '0',
-        duration: 0,
-      });
+      contactFormAnimation()
       try {
         const templateParams = {
           name,
@@ -75,7 +42,6 @@ const ContactForm = () => {
         <div className="form">
           <input
             value={name}
-            tabIndex="-1"
             className="text-input"
             type="text"
             autoComplete="off"
@@ -90,7 +56,6 @@ const ContactForm = () => {
         <div className="form">
           <input
             value={email}
-            tabIndex="-1"
             className="text-input"
             type="text"
             autoComplete="off"
@@ -105,7 +70,6 @@ const ContactForm = () => {
         <div className="form">
           <input
             value={message}
-            tabIndex="-1"
             className="text-input message"
             type="text"
             autoComplete="off"

@@ -1,32 +1,15 @@
-// React
 import React, { useEffect } from 'react';
-
-// Animation
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-// Style
 import '../styles/components/Contact.scss';
-
-// Logos
 import github from '../assets/logos/github.png';
 import linkedin from '../assets/logos/linkedin.png';
-
-// Widgets
 import ContactForm from '../widgets/ContactForm';
-
-gsap.registerPlugin(ScrollTrigger);
+import contactAnimation from '../animations/ContactAnimation';
 
 const Contact = () => {
   useEffect(() => {
-    gsap.to('.scroll-down', {
-      display: 'none',
-      scrollTrigger: {
-        trigger: '.media_container',
-        start: 'top 100%',
-      },
-    });
+    contactAnimation()
   }, []);
+  
   return (
     <div className="contact">
       <div className="content">

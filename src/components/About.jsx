@@ -1,58 +1,18 @@
 // React
 import React, { useEffect } from 'react';
 
-// Animation
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
 // Components
 import UnderlinedText from '../widgets/UnderlinedText';
 
 // Assets & Style
 import pp from '../assets/pp.png';
-// import profesional from '../assets/profesional.png';
 import '../styles/components/About.scss';
 
-gsap.registerPlugin(ScrollTrigger);
+import aboutAnimation from '../animations/AboutAnimation';
 
 const About = () => {
   useEffect(() => {
-    gsap.to('.copy', {
-      opacity: 1,
-      duration: 2,
-      scrollTrigger: {
-        trigger: '.copy',
-        toggleActions: 'restart',
-      },
-    });
-    gsap.to('.first', {
-      width: '100%',
-      duration: 1,
-      scrollTrigger: {
-        trigger: '.first',
-        toggleActions: 'restart',
-      },
-    });
-    gsap.to(
-      '.second',
-      {
-        width: '100%',
-        duration: 1,
-        scrollTrigger: {
-          trigger: '.second',
-          toggleActions: 'restart',
-        },
-      },
-      '-=0.3'
-    );
-    gsap.to('.title', {
-      opacity: 1,
-      duration: 2,
-      scrollTrigger: {
-        trigger: '.title',
-        toggleActions: 'restart',
-      },
-    });
+    aboutAnimation()
   });
 
   return (

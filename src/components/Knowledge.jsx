@@ -1,10 +1,6 @@
 // React
 import React, { useEffect } from 'react';
 
-// Animation
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
 // Style
 import '../styles/components/Knowledge.scss';
 
@@ -24,7 +20,8 @@ import sass from '../assets/logos/sass.png';
 import htmlcss from '../assets/logos/htmlcss.png';
 import ingles from '../assets/logos/ingles.png';
 
-gsap.registerPlugin(ScrollTrigger);
+import knowledgeAnimation from '../animations/KnowledgeAnimation';
+
 
 const Item = ({ img, text }) => {
   return (
@@ -39,15 +36,7 @@ const Item = ({ img, text }) => {
 
 const Knowledge = () => {
   useEffect(() => {
-    gsap.to('.knowledge .content .item', {
-      opacity: 1,
-      duration: 2,
-      stagger: 0.1,
-      scrollTrigger: {
-        trigger: '.knowledge .content .item',
-        start: 'top 90%',
-      },
-    });
+    knowledgeAnimation()
   });
 
   return (
