@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Home from '../containers/Home';
-import Project from '../containers/Project';
-import ProjectList from '../containers/ProjectList';
-import NotFound from '../containers/NotFound';
+import Home from './containers/Home';
+import Project from './containers/Project';
+import ProjectList from './containers/ProjectList';
+import NotFound from './containers/NotFound';
 
 const App = () => {
   return (

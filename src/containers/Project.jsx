@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 
 // initialState
-import initialState from '../hooks/initialState';
+import initialState from '../utils/initialState';
 import '../styles/components/Project.scss';
 
 // Assetdummie
