@@ -57,30 +57,25 @@
       }
     }
 
-    .form .text-input:focus + .sub-section-title .content-title,
-    .form .text-input:valid + .sub-section-title .content-title {
-      transform: translateY(-250%);
-    }
-
     .form .text-input:focus + .sub-section-title::after,
     .form .text-input:valid + .sub-section-title::after {
       transform: translateX(0%);
     }
 
     .submit{
-      outline: none;
-      border: none;
-      font-family: 'Gothic';
-      font-size: 20px;
-      line-height: 40px;
-      display: flex;
       align-items: center;
-      justify-content: center;
+      border: none;
       border-radius: 30px;
+      background-color: lighten($accent, 10%);
       cursor: pointer;
       color: $black;
+      display: flex;
+      font-family: 'Gothic';
+      font-size: 20px;
+      justify-content: center;
       font-weight: bold;
-      background-color: lighten($accent, 10%);
+      outline: none;
+      line-height: 40px;
       position: relative;
       .msg{
         font-size: 72px;
