@@ -1,10 +1,6 @@
 import React from 'react';
 
 const Input = ({ value, name, onChange, title }) => {
-  // const handleColor = () => {
-  //   console.log('handlecolor')
-  // }
-
   return (
     <div className="form">
       <input
@@ -16,10 +12,8 @@ const Input = ({ value, name, onChange, title }) => {
         required
         onChange={onChange}
       />
-      <label className="sub-section-title">
-        <span className="content-title">{title}</span>
-        {/* <div className={`color-${name}`} /> */}
-        <div className="color" />
+      <label className="label-name">
+        <span className="content-name">{title}</span>
       </label>
     </div>
   );
