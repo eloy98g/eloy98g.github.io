@@ -13,6 +13,7 @@
   background-color: $white;
   color: $black;
   padding: 0px 100px;
+  
   .content {
     max-width: 1440px;
     height: 100%;
@@ -140,17 +141,6 @@
           font-size: 3.5vw;
           line-height: 56px;
         }
-        // .circular-image{
-        //   display: flex;
-        //   width: 150px;
-        //   height: 150px;
-        //   align-self: center;
-        //   img{
-        //     width: 100%;
-        //     height: 100%;
-        //     object-fit: contain;
-        //   }
-        // }
       }
       .right-image {
         display: none;
@@ -169,7 +159,6 @@
           font-size: 8vw;
           line-height: 20vw;
         }
-
         .copy {
           font-size: 3.5vw;
           line-height: 10vw;
